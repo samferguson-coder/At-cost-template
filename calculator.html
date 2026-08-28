@@ -1,157 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Household Savings Calculator | A New America</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen antialiased">
 
-html
-<div class="w-full max-w-5xl mx-auto my-12 px-4 sm:px-6 font-sans text-slate-800">
-  
-  <section class="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-800 mb-10">
-    <div class="max-w-3xl mx-auto text-center space-y-3">
-      <span class="inline-block px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold uppercase tracking-widest rounded-full">
-        National Economic Impact
-      </span>
-      <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
-        The Macro Burden vs. Direct Ownership
-      </h2>
-      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-        Every year, American consumers pay a massive aggregate premium in multi-tier markups, financial extraction, and intermediary overhead. Shifting to direct, at-cost cooperative ownership removes these extractive layers entirely.
+  <!-- Top Navigation Header -->
+  <header class="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="text-xl font-bold tracking-tight text-blue-900 hover:text-blue-700 transition-colors">
+          A New America
+        </a>
+        <nav class="flex items-center space-x-6 text-sm font-medium text-gray-600">
+          <a href="index.html" class="hover:text-blue-700 transition-colors">Home</a>
+          <a href="manifesto.html" class="hover:text-blue-700 transition-colors">Manifesto</a>
+          <a href="calculator.html" class="text-blue-700 font-semibold">Calculator</a>
+          <a href="macro-budget.html" class="hover:text-blue-700 transition-colors">Macro Budget</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Calculator Content -->
+  <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">Household Savings & Financial Mutualization Model</h1>
+      <p class="text-sm text-gray-600 mt-2">
+        See how much capital returns to your household when banking interest, credit card fees, insurance margins, and retail extraction are eliminated through member ownership.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-      
-      <div class="bg-slate-800/70 border border-rose-500/20 rounded-2xl p-6 text-center relative overflow-hidden">
-        <div class="absolute top-0 left-0 right-0 h-1 bg-rose-500"></div>
-        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">Approx. Current National Outlay</p>
-        <p class="text-3xl sm:text-4xl font-black text-rose-400 mt-2">$2.4 Trillion</p>
-        <p class="text-xs text-slate-400 mt-1">Paid annually across extractive retail layers</p>
-      </div>
-
-      <div class="bg-slate-800/70 border border-emerald-500/20 rounded-2xl p-6 text-center relative overflow-hidden">
-        <div class="absolute top-0 left-0 right-0 h-1 bg-emerald-500"></div>
-        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">Approx. At-Cost Ownership</p>
-        <p class="text-3xl sm:text-4xl font-black text-emerald-400 mt-2">$1.3 Trillion</p>
-        <p class="text-xs text-slate-400 mt-1">True capital & operational replacement</p>
-      </div>
-
-      <div class="bg-slate-800/70 border border-sky-500/20 rounded-2xl p-6 text-center relative overflow-hidden">
-        <div class="absolute top-0 left-0 right-0 h-1 bg-sky-500"></div>
-        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">Approx. National Retention</p>
-        <p class="text-3xl sm:text-4xl font-black text-sky-400 mt-2">~46% Reduction</p>
-        <p class="text-xs text-slate-400 mt-1">Over <strong>$1.1 Trillion</strong> restored directly to consumers</p>
-      </div>
-
-    </div>
-
-    <p class="text-[11px] text-slate-500 text-center mt-6 italic">
-      *All figures are approximate aggregate estimates modeled across conventional retail margins, financing premiums, and intermediary friction vs. pure cost-of-production capitalization.
-    </p>
-  </section>
-
-  <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-lg border border-slate-200">
-    <div class="text-center max-w-2xl mx-auto mb-8">
-      <h3 class="text-xl sm:text-3xl font-bold text-slate-900 tracking-tight">
-        Calculate Your Household's Share
-      </h3>
-      <p class="text-slate-600 text-sm sm:text-base mt-2">
-        See how this transition scales down from trillions at the national level to direct liquid savings in your household budget.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-      
-      <div class="space-y-6 bg-slate-50 p-6 rounded-2xl border border-slate-200">
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <label for="monthlySpend" class="text-sm font-semibold text-slate-700">
-              Your Current Monthly Outlay:
-            </label>
-            <span id="spendLabel" class="text-base font-extrabold text-slate-900">$1,500</span>
-          </div>
-          <input 
-            type="range" 
-            id="monthlySpend" 
-            min="200" 
-            max="6000" 
-            step="50" 
-            value="1500" 
-            class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
-            oninput="updateCalculations()"
-          >
-          <div class="flex justify-between text-[11px] text-slate-400 mt-1">
-            <span>$200/mo</span>
-            <span>$6,000/mo</span>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex justify-between items-center mb-2">
-            <label for="markupRate" class="text-sm font-semibold text-slate-700">
-              Estimated Intermediary & Retail Markup:
-            </label>
-            <span id="markupLabel" class="text-base font-extrabold text-slate-900">45%</span>
-          </div>
-          <input 
-            type="range" 
-            id="markupRate" 
-            min="20" 
-            max="65" 
-            step="1" 
-            value="45" 
-            class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
-            oninput="updateCalculations()"
-          >
-          <div class="flex justify-between text-[11px] text-slate-400 mt-1">
-            <span>20% (Low friction)</span>
-            <span>65% (Extractive peak)</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-emerald-900 text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-inner">
-        <div>
-          <span class="text-xs uppercase font-bold tracking-wider text-emerald-300">Projected Household Impact</span>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Input Controls -->
+      <div class="lg:col-span-2 bg-white p-6 sm:p-8 rounded-xl border border-gray-200 shadow-sm space-y-6">
+        
+        <!-- Pillar 1 Financial Inputs -->
+        <div class="border-b border-gray-100 pb-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-700">Pillar 1: Member-Owned Finance & Debt</span>
+          
           <div class="mt-4">
-            <p class="text-xs text-emerald-200">Direct At-Cost Monthly Spend</p>
-            <p id="newMonthlySpend" class="text-2xl font-bold text-white mt-1">$825 / mo</p>
+            <div class="flex justify-between text-sm font-semibold text-gray-800 mb-1">
+              <label for="input-finance">Monthly Debt Service (Mortgage Interest, Auto Loans, Credit Cards)</label>
+              <span id="label-finance" class="text-blue-700 font-bold">$1,200</span>
+            </div>
+            <input type="range" id="input-finance" min="0" max="4000" step="50" value="1200" class="w-full accent-blue-700 cursor-pointer">
+            <p class="text-xs text-gray-500 mt-1">Est. Savings: ~55% (Elimination of commercial banking spreads & late/origination fees)</p>
           </div>
 
-          <hr class="border-emerald-700/60 my-4">
+          <div class="mt-4">
+            <div class="flex justify-between text-sm font-semibold text-gray-800 mb-1">
+              <label for="input-insurance">Monthly Property, Auto & Life Insurance</label>
+              <span id="label-insurance" class="text-blue-700 font-bold">$350</span>
+            </div>
+            <input type="range" id="input-insurance" min="50" max="1500" step="25" value="350" class="w-full accent-blue-700 cursor-pointer">
+            <p class="text-xs text-gray-500 mt-1">Est. Savings: ~35% (Non-profit mutual risk pooling returning surpluses to policyholders)</p>
+          </div>
+        </div>
+
+        <!-- Pillars 2, 3, 4 Inputs -->
+        <div class="space-y-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-700">Pillars 2, 3 & 4: At-Cost Essentials & Healthcare</span>
 
           <div>
-            <p class="text-xs text-emerald-200">Monthly Net Savings</p>
-            <p id="monthlySavings" class="text-3xl sm:text-4xl font-black text-emerald-300 mt-1">$675 / mo</p>
+            <div class="flex justify-between text-sm font-semibold text-gray-800 mb-1">
+              <label for="input-housing">Monthly Rent / Base Housing Operating Costs</label>
+              <span id="label-housing" class="text-blue-700 font-bold">$1,600</span>
+            </div>
+            <input type="range" id="input-housing" min="400" max="5000" step="50" value="1600" class="w-full accent-blue-700 cursor-pointer">
+            <p class="text-xs text-gray-500 mt-1">Est. Savings: ~25% (Community land trust model removing private landlord yield extraction)</p>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-sm font-semibold text-gray-800 mb-1">
+              <label for="input-health">Monthly Healthcare Premiums & Out-of-Pocket RX</label>
+              <span id="label-health" class="text-blue-700 font-bold">$800</span>
+            </div>
+            <input type="range" id="input-health" min="0" max="2500" step="50" value="800" class="w-full accent-blue-700 cursor-pointer">
+            <p class="text-xs text-gray-500 mt-1">Est. Savings: ~45% (Provider-mutual pricing removing PBM & carrier overhead)</p>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-sm font-semibold text-gray-800 mb-1">
+              <label for="input-goods">Monthly Groceries & Retail Goods</label>
+              <span id="label-goods" class="text-blue-700 font-bold">$900</span>
+            </div>
+            <input type="range" id="input-goods" min="200" max="3000" step="50" value="900" class="w-full accent-blue-700 cursor-pointer">
+            <p class="text-xs text-gray-500 mt-1">Est. Savings: ~30% (Direct cooperative distribution bypassing retail markup)</p>
           </div>
         </div>
 
-        <div class="mt-6 pt-4 border-t border-emerald-700/60 flex items-center justify-between">
-          <span class="text-xs sm:text-sm font-medium text-emerald-100">Annual Retained Liquidity:</span>
-          <span id="annualSavings" class="text-xl sm:text-2xl font-black text-white">$8,100 / yr</span>
-        </div>
       </div>
 
+      <!-- Results Display Box -->
+      <div class="bg-blue-950 text-white p-6 sm:p-8 rounded-xl shadow-lg flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-wider text-blue-300">Reclaimed Capital</span>
+          
+          <div class="mt-6">
+            <span class="text-xs text-blue-200 uppercase tracking-wide">Monthly Cashflow Restored</span>
+            <div id="display-monthly" class="text-4xl font-extrabold text-white mt-1">$1,812</div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-blue-800">
+            <span class="text-xs text-blue-200 uppercase tracking-wide">Annual Household Dividend</span>
+            <div id="display-annual" class="text-3xl font-extrabold text-emerald-400 mt-1">$21,750</div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-blue-800 space-y-2">
+            <div class="flex justify-between text-xs text-blue-200">
+              <span>Financial Institution Mutualization:</span>
+              <span id="display-breakdown-finance" class="font-bold text-white">$782/mo</span>
+            </div>
+            <div class="flex justify-between text-xs text-blue-200">
+              <span>Goods, Housing & Care Savings:</span>
+              <span id="display-breakdown-goods" class="font-bold text-white">$1,030/mo</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-xs text-blue-300 mt-8 leading-relaxed">
+          Because member-owned financial institutions distribute surplus revenue back as reduced interest rates or member equity credits, money stays entirely within the working household economy.
+        </p>
+      </div>
     </div>
-  </section>
+  </main>
 
-</div>
+  <!-- Bottom Footer -->
+  <footer class="w-full bg-white border-t border-gray-200 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+      <p class="font-medium text-gray-700">A New America &bull; Mutualized At-Cost Economic Framework</p>
+      <div class="mt-3 flex justify-center space-x-6 text-xs text-gray-600">
+        <a href="index.html" class="hover:text-gray-900">Home</a>
+        <a href="manifesto.html" class="hover:text-gray-900">Manifesto</a>
+        <a href="calculator.html" class="hover:text-gray-900">Calculator</a>
+        <a href="macro-budget.html" class="hover:text-gray-900">Macro Budget</a>
+      </div>
+      <p class="mt-4 text-xs text-gray-400">&copy; 2026 Anewamerica.info. All rights reserved.</p>
+    </div>
+  </footer>
 
-<script>
-  function updateCalculations() {
-    const spend = parseFloat(document.getElementById('monthlySpend').value);
-    const markup = parseFloat(document.getElementById('markupRate').value) / 100;
+  <script>
+    const fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
 
-    // Direct cost calculation: Spend - (Spend * markup)
-    const monthlySavingsVal = spend * markup;
-    const directCostVal = spend - monthlySavingsVal;
-    const annualSavingsVal = monthlySavingsVal * 12;
+    const finance = document.getElementById('input-finance');
+    const insurance = document.getElementById('input-insurance');
+    const housing = document.getElementById('input-housing');
+    const health = document.getElementById('input-health');
+    const goods = document.getElementById('input-goods');
 
-    // Update Slider Labels
-    document.getElementById('spendLabel').textContent = `$${spend.toLocaleString()}`;
-    document.getElementById('markupLabel').textContent = `${Math.round(markup * 100)}%`;
+    function calculate() {
+      const fVal = parseFloat(finance.value);
+      const iVal = parseFloat(insurance.value);
+      const hVal = parseFloat(housing.value);
+      const mVal = parseFloat(health.value);
+      const gVal = parseFloat(goods.value);
 
-    // Update Outcome Displays
-    document.getElementById('newMonthlySpend').textContent = `$${Math.round(directCostVal).toLocaleString()} / mo`;
-    document.getElementById('monthlySavings').textContent = `$${Math.round(monthlySavingsVal).toLocaleString()} / mo`;
-    document.getElementById('annualSavings').textContent = `$${Math.round(annualSavingsVal).toLocaleString()} / yr`;
-  }
+      document.getElementById('label-finance').innerText = fmt.format(fVal);
+      document.getElementById('label-insurance').innerText = fmt.format(iVal);
+      document.getElementById('label-housing').innerText = fmt.format(hVal);
+      document.getElementById('label-health').innerText = fmt.format(mVal);
+      document.getElementById('label-goods').innerText = fmt.format(gVal);
 
-  // Initialize on page load
-  document.addEventListener('DOMContentLoaded', updateCalculations);
-</script>
+      // Calculations:
+      // Pillar 1: 55% saved on interest/finance fees, 35% on insurance overhead
+      const financeSavings = (fVal * 0.55) + (iVal * 0.35);
+      
+      // Pillars 2, 3, 4:
+      const otherSavings = (hVal * 0.25) + (mVal * 0.45) + (gVal * 0.30);
+
+      const totalMonthly = financeSavings + otherSavings;
+      const totalAnnual = totalMonthly * 12;
+
+      document.getElementById('display-monthly').innerText = fmt.format(totalMonthly);
+      document.getElementById('display-annual').innerText = fmt.format(totalAnnual);
+      document.getElementById('display-breakdown-finance').innerText = fmt.format(financeSavings) + '/mo';
+      document.getElementById('display-breakdown-goods').innerText = fmt.format(otherSavings) + '/mo';
+    }
+
+    [finance, insurance, housing, health, goods].forEach(el => el.addEventListener('input', calculate));
+    calculate();
+  </script>
+
+</body>
+</html>
