@@ -1,252 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A New America | Mutualized At-Cost Economy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased leading-relaxed">
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen antialiased">
 
-  <!-- Header / Hero -->
-  <header class="bg-slate-900 text-white border-b border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-      <div class="inline-block bg-emerald-500/20 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
-        Economic White Paper & Interactive Model
+  <header class="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="text-xl font-bold tracking-tight text-blue-900 hover:text-blue-700 transition-colors">
+          A New America
+        </a>
+        <nav class="flex items-center space-x-6 text-sm font-medium text-gray-600">
+          <a href="index.html" class="text-blue-700 font-semibold">Home</a>
+          <a href="manifesto.html" class="hover:text-blue-700 transition-colors">Manifesto</a>
+          <a href="calculator.html" class="hover:text-blue-700 transition-colors">Calculator</a>
+          <a href="macro-budget.html" class="hover:text-blue-700 transition-colors">Macro Budget</a>
+        </nav>
       </div>
-      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
-        The Mutualized At-Cost Economy
-      </h1>
-      <p class="text-lg sm:text-xl text-slate-300 max-w-3xl">
-        Restructuring essential public utilities, basic banking, universal healthcare, and risk pools into non-profit citizen cooperatives funded by a streamlined consumption model.
-      </p>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-10 sm:px-6 lg:px-8 space-y-12">
-
-    <!-- Executive Summary & The Four Pillars -->
-    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-8">
-      <h2 class="text-2xl font-bold text-slate-900 mb-4">The Four Core Pillars</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-        
-        <div class="p-5 rounded-lg bg-slate-50 border border-slate-200">
-          <div class="flex items-center space-x-3 mb-2">
-            <span class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm">1</span>
-            <h3 class="text-lg font-semibold text-slate-900">Mutualized Public Banking</h3>
-          </div>
-          <p class="text-slate-600 text-sm">
-            Depository institutions operating at cost. Eliminates predatory interest spreads, excessive fees, and debt-service extraction on fundamental consumer credit and mortgages.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-lg bg-slate-50 border border-slate-200">
-          <div class="flex items-center space-x-3 mb-2">
-            <span class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm">2</span>
-            <h3 class="text-lg font-semibold text-slate-900">At-Cost Universal Healthcare</h3>
-          </div>
-          <p class="text-slate-600 text-sm">
-            Decouples medical care from corporate profit margins and bureaucratic overhead. Delivers direct clinical services and essential prescription coverage at actual cost of delivery.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-lg bg-slate-50 border border-slate-200">
-          <div class="flex items-center space-x-3 mb-2">
-            <span class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm">3</span>
-            <h3 class="text-lg font-semibold text-slate-900">Unified Cooperative Risk Pools</h3>
-          </div>
-          <p class="text-slate-600 text-sm">
-            Property, casualty, and life underwriting pooled at transparent statistical risk rates, removing the profit premium, speculative reserves, and aggressive claim denial apparatus.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-lg bg-slate-50 border border-slate-200">
-          <div class="flex items-center space-x-3 mb-2">
-            <span class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm">4</span>
-            <h3 class="text-lg font-semibold text-slate-900">Universal Consumption Revenue</h3>
-          </div>
-          <p class="text-slate-600 text-sm">
-            A single, equitable consumption-based tax framework that simplifies the tax code, stabilizes public revenue, and shifts fiscal drag away from productive household labor.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Interactive Household Savings Calculator -->
-    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-8">
-      <div class="border-b border-slate-200 pb-4 mb-6">
-        <h2 class="text-2xl font-bold text-slate-900">Interactive Household Savings Model</h2>
-        <p class="text-slate-600 text-sm mt-1">
-          Adjust household income, debt load, and core expenditures to estimate monthly and annual net savings under the mutualized economic structure.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        <!-- Input Form -->
-        <div class="lg:col-span-6 space-y-4">
-          <div>
-            <label class="block text-sm font-semibold text-slate-700">Gross Annual Household Income ($)</label>
-            <input type="number" id="annualIncome" value="75000" step="1000" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-slate-900 shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
-          </div>
-
-          <div>
-            <label class="block text-sm font-semibold text-slate-700">Monthly Healthcare Premiums & Out-of-Pocket ($)</label>
-            <input type="number" id="monthlyHealth" value="650" step="25" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-slate-900 shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
-          </div>
-
-          <div>
-            <label class="block text-sm font-semibold text-slate-700">Monthly Property, Auto & Life Insurance ($)</label>
-            <input type="number" id="monthlyInsurance" value="380" step="10" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-slate-900 shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
-          </div>
-
-          <div>
-            <label class="block text-sm font-semibold text-slate-700">Monthly Banking Fees & Consumer Debt Interest ($)</label>
-            <input type="number" id="monthlyBankingDebt" value="420" step="10" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-slate-900 shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
-          </div>
-
-          <div>
-            <label class="block text-sm font-semibold text-slate-700">Monthly Discretionary Retail / Goods Spend ($)</label>
-            <input type="number" id="monthlyRetail" value="1200" step="50" class="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-slate-900 shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500" />
-          </div>
-
-          <button type="button" onclick="calculateSavings()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 px-4 rounded-md transition shadow">
-            Recalculate Savings
-          </button>
-        </div>
-
-        <!-- Output Dashboard -->
-        <div class="lg:col-span-6 bg-slate-900 text-white rounded-xl p-6 flex flex-col justify-between">
-          <div>
-            <span class="text-xs uppercase tracking-wider text-emerald-400 font-semibold">Estimated Impact</span>
-            <h3 class="text-xl font-bold mt-1 text-white">Projected Household Ledger</h3>
-
-            <div class="mt-6 space-y-4 text-sm">
-              <div class="flex justify-between pb-2 border-b border-slate-800">
-                <span class="text-slate-400">Current Monthly Essential Cost:</span>
-                <span id="currentCostDisplay" class="font-semibold text-white">$1,450.00</span>
-              </div>
-              <div class="flex justify-between pb-2 border-b border-slate-800">
-                <span class="text-slate-400">Mutualized At-Cost Monthly Total:</span>
-                <span id="mutualizedCostDisplay" class="font-semibold text-emerald-400">$615.00</span>
-              </div>
-              <div class="flex justify-between pb-2 border-b border-slate-800">
-                <span class="text-slate-400">Adjusted Universal Consumption Tax:</span>
-                <span id="taxAdjustmentDisplay" class="font-semibold text-slate-300">+$120.00</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-8 pt-6 border-t border-slate-800">
-            <div class="text-slate-400 text-xs uppercase tracking-wider">Net Annual Household Savings</div>
-            <div id="netAnnualSavings" class="text-4xl font-extrabold text-emerald-400 mt-1">$8,580.00</div>
-            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-              Reflects a ~58% reduction in essential service extraction minus the standardized consumption rate adjustment.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- National Balance & Ledger Framework -->
-    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 sm:p-8">
-      <h2 class="text-2xl font-bold text-slate-900 mb-3">Macroeconomic Ledger Transition</h2>
-      <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-        Reallocating capital away from financial rent-seeking back into real domestic purchasing power restores middle-quintile balance sheet stability and lowers sovereign deficit pressure.
+  <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center max-w-3xl mx-auto">
+      <span class="text-xs font-semibold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+        Economic Architecture
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mt-4">
+        The Mutualized At-Cost Economy
+      </h1>
+      <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+        A structural economic framework designed to eliminate compounding intermediary extraction, lower essential cost-of-living burdens, and restore household purchasing power.
       </p>
+    </div>
 
-      <div class="overflow-x-auto">
-        <table class="w-full text-left text-sm border-collapse">
-          <thead>
-            <tr class="border-b border-slate-200 bg-slate-50 text-slate-700">
-              <th class="py-3 px-4 font-semibold">Sector</th>
-              <th class="py-3 px-4 font-semibold">Current Commercial Mechanism</th>
-              <th class="py-3 px-4 font-semibold">Mutualized Cooperative Mechanism</th>
-              <th class="py-3 px-4 font-semibold">Macro Economic Efficiency</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 text-slate-600">
-            <tr>
-              <td class="py-3 px-4 font-medium text-slate-900">Banking & Liquidity</td>
-              <td class="py-3 px-4">Net interest margin extraction & securitization</td>
-              <td class="py-3 px-4 text-emerald-700">At-cost administrative loan servicing</td>
-              <td class="py-3 px-4">Eliminates private debt drag on wages</td>
-            </tr>
-            <tr>
-              <td class="py-3 px-4 font-medium text-slate-900">Healthcare System</td>
-              <td class="py-3 px-4">Fee-for-service, profit-driven PBMs & payers</td>
-              <td class="py-3 px-4 text-emerald-700">Unified direct-provider non-profit pool</td>
-              <td class="py-3 px-4">Removes 20-30% administrative overhead</td>
-            </tr>
-            <tr>
-              <td class="py-3 px-4 font-medium text-slate-900">Risk Underwriting</td>
-              <td class="py-3 px-4">Shareholder return, risk selection & denials</td>
-              <td class="py-3 px-4 text-emerald-700">Actuarially pure mutual reserves</td>
-              <td class="py-3 px-4">Minimizes catastrophic insolvency events</td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">The Manifesto</h2>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Examine the foundational economic theory, structural cost breakdowns, and the cooperative framework replacing debt-driven pricing models.
+          </p>
+        </div>
+        <a href="manifesto.html" class="mt-6 inline-flex items-center text-sm font-semibold text-blue-700 hover:text-blue-900">
+          Read White Paper &rarr;
+        </a>
       </div>
-    </section>
 
+      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">Interactive Calculator</h2>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Simulate monthly household savings across healthcare, housing, energy, and retail under an at-cost delivery structure.
+          </p>
+        </div>
+        <a href="calculator.html" class="mt-6 inline-flex items-center text-sm font-semibold text-blue-700 hover:text-blue-900">
+          Open Calculator &rarr;
+        </a>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">Macro Budget</h2>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Review the macroeconomic ledger, public balance sheet metrics, and total system savings aggregated across national sectors.
+          </p>
+        </div>
+        <a href="macro-budget.html" class="mt-6 inline-flex items-center text-sm font-semibold text-blue-700 hover:text-blue-900">
+          View Macro Ledger &rarr;
+        </a>
+      </div>
+    </div>
   </main>
 
-  <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 text-xs py-8">
-    <div class="max-w-6xl mx-auto px-4 text-center sm:px-6 lg:px-8">
-      <p>Mutualized At-Cost Economy Initiative &copy; 2026. Hosted on GitHub Pages.</p>
+  <footer class="w-full bg-white border-t border-gray-200 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+      <p class="font-medium text-gray-700">A New America &bull; Mutualized At-Cost Economic Framework</p>
+      <div class="mt-3 flex justify-center space-x-6 text-xs text-gray-600">
+        <a href="index.html" class="hover:text-gray-900">Home</a>
+        <a href="manifesto.html" class="hover:text-gray-900">Manifesto</a>
+        <a href="calculator.html" class="hover:text-gray-900">Calculator</a>
+        <a href="macro-budget.html" class="hover:text-gray-900">Macro Budget</a>
+      </div>
+      <p class="mt-4 text-xs text-gray-400">&copy; 2026 Anewamerica.info. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- Calculator Script -->
-  <script>
-    function calculateSavings() {
-      const income = parseFloat(document.getElementById('annualIncome').value) || 0;
-      const health = parseFloat(document.getElementById('monthlyHealth').value) || 0;
-      const insurance = parseFloat(document.getElementById('monthlyInsurance').value) || 0;
-      const banking = parseFloat(document.getElementById('monthlyBankingDebt').value) || 0;
-      const retail = parseFloat(document.getElementById('monthlyRetail').value) || 0;
-
-      // Current monthly essential baseline
-      const currentMonthly = health + insurance + banking;
-
-      // Mutualized estimated at-cost factors:
-      // Health: ~40% of commercial cost
-      // Insurance: ~50% of commercial cost
-      // Banking/Debt fees: ~30% of commercial cost
-      const mutualHealth = health * 0.40;
-      const mutualInsurance = insurance * 0.50;
-      const mutualBanking = banking * 0.30;
-      const mutualizedMonthly = mutualHealth + mutualInsurance + mutualBanking;
-
-      // Consumption tax adjustment on discretionary retail (10% standard rate)
-      const taxAdjustment = retail * 0.10;
-
-      // Net monthly and annual savings
-      const monthlySavings = (currentMonthly - mutualizedMonthly) - taxAdjustment;
-      const annualSavings = monthlySavings * 12;
-
-      // Render values
-      const fmt = (num) => '$' + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-
-      document.getElementById('currentCostDisplay').innerText = fmt(currentMonthly);
-      document.getElementById('mutualizedCostDisplay').innerText = fmt(mutualizedMonthly);
-      document.getElementById('taxAdjustmentDisplay').innerText = '+' + fmt(taxAdjustment);
-      document.getElementById('netAnnualSavings').innerText = fmt(Math.max(0, annualSavings));
-    }
-
-    // Run initial calculation on load
-    window.addEventListener('DOMContentLoaded', calculateSavings);
-  </script>
-  <footer class="w-full bg-gray-50 border-t border-gray-200 mt-16 py-8">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
-    <p class="font-medium text-gray-700">A New America &bull; Mutualized At-Cost Economic Framework</p>
-    <div class="mt-4 flex justify-center space-x-6">
-      <a href="index.html" class="hover:text-gray-900 transition-colors">Home</a>
-      <a href="manifesto.html" class="hover:text-gray-900 transition-colors">Manifesto</a>
-      <a href="calculator.html" class="hover:text-gray-900 transition-colors">Calculator</a>
-      <a href="macro-budget.html" class="hover:text-gray-900 transition-colors">Macro Budget</a>
-    </div>
-    <p class="mt-4 text-xs text-gray-400">&copy; 2026 Anewamerica.info. All rights reserved.</p>
-  </div>
-</footer>
 
 </body>
 </html>
