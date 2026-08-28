@@ -1,406 +1,157 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <header class="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <div class="flex items-center">
-        <a href="index.html" class="text-xl font-bold tracking-tight text-gray-900 hover:text-blue-600 transition-colors">
-          A New America
-        </a>
-      </div>
-      <nav class="flex items-center space-x-6 text-sm font-medium text-gray-600">
-        <a href="index.html" class="hover:text-blue-600 transition-colors">Home</a>
-        <a href="manifesto.html" class="hover:text-blue-600 transition-colors">Manifesto</a>
-        <a href="calculator.html" class="hover:text-blue-600 transition-colors">Calculator</a>
-        <a href="macro-budget.html" class="hover:text-blue-600 transition-colors">Macro Budget</a>
-      </nav>
+
+html
+<div class="w-full max-w-5xl mx-auto my-12 px-4 sm:px-6 font-sans text-slate-800">
+  
+  <section class="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-800 mb-10">
+    <div class="max-w-3xl mx-auto text-center space-y-3">
+      <span class="inline-block px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold uppercase tracking-widest rounded-full">
+        National Economic Impact
+      </span>
+      <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
+        The Macro Burden vs. Direct Ownership
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        Every year, American consumers pay a massive aggregate premium in multi-tier markups, financial extraction, and intermediary overhead. Shifting to direct, at-cost cooperative ownership removes these extractive layers entirely.
+      </p>
     </div>
-  </div>
-</header>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Self-Sustaining At-Cost Economy | Public Blueprint & Household Calculator</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: { 800: '#1e293b', 900: '#0f172a', 950: '#020617' },
-                        emerald: { 500: '#10b981', 600: '#059669', 700: '#047857' }
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #10b981;
-            cursor: pointer;
-            border: 2px solid #ffffff;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        }
-        input[type="range"]::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #10b981;
-            cursor: pointer;
-            border: 2px solid #ffffff;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      
+      <div class="bg-slate-800/70 border border-rose-500/20 rounded-2xl p-6 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-rose-500"></div>
+        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">Approx. Current National Outlay</p>
+        <p class="text-3xl sm:text-4xl font-black text-rose-400 mt-2">$2.4 Trillion</p>
+        <p class="text-xs text-slate-400 mt-1">Paid annually across extractive retail layers</p>
+      </div>
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-9 h-9 rounded-lg bg-emerald-500 flex items-center justify-center text-slate-950 font-bold text-lg shadow-md">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                </div>
-                <div>
-                    <span class="text-lg font-bold tracking-tight text-white">The At-Cost Economy</span>
-                    <span class="hidden sm:inline-block text-xs bg-emerald-500/20 text-emerald-400 font-medium px-2 py-0.5 rounded ml-2 border border-emerald-500/30">Citizen Ownership Model</span>
-                </div>
-            </div>
-            <nav class="flex items-center space-x-6 text-sm font-medium">
-                <a href="#calculator" class="text-slate-300 hover:text-emerald-400 transition-colors">Calculator</a>
-                <a href="#pillars" class="text-slate-300 hover:text-emerald-400 transition-colors">Core Pillars</a>
-                <a href="#macro" class="text-slate-300 hover:text-emerald-400 transition-colors">National Budget</a>
-            </nav>
+      <div class="bg-slate-800/70 border border-emerald-500/20 rounded-2xl p-6 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-emerald-500"></div>
+        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">Approx. At-Cost Ownership</p>
+        <p class="text-3xl sm:text-4xl font-black text-emerald-400 mt-2">$1.3 Trillion</p>
+        <p class="text-xs text-slate-400 mt-1">True capital & operational replacement</p>
+      </div>
+
+      <div class="bg-slate-800/70 border border-sky-500/20 rounded-2xl p-6 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-sky-500"></div>
+        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">Approx. National Retention</p>
+        <p class="text-3xl sm:text-4xl font-black text-sky-400 mt-2">~46% Reduction</p>
+        <p class="text-xs text-slate-400 mt-1">Over <strong>$1.1 Trillion</strong> restored directly to consumers</p>
+      </div>
+
+    </div>
+
+    <p class="text-[11px] text-slate-500 text-center mt-6 italic">
+      *All figures are approximate aggregate estimates modeled across conventional retail margins, financing premiums, and intermediary friction vs. pure cost-of-production capitalization.
+    </p>
+  </section>
+
+  <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-lg border border-slate-200">
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <h3 class="text-xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+        Calculate Your Household's Share
+      </h3>
+      <p class="text-slate-600 text-sm sm:text-base mt-2">
+        See how this transition scales down from trillions at the national level to direct liquid savings in your household budget.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      
+      <div class="space-y-6 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <label for="monthlySpend" class="text-sm font-semibold text-slate-700">
+              Your Current Monthly Outlay:
+            </label>
+            <span id="spendLabel" class="text-base font-extrabold text-slate-900">$1,500</span>
+          </div>
+          <input 
+            type="range" 
+            id="monthlySpend" 
+            min="200" 
+            max="6000" 
+            step="50" 
+            value="1500" 
+            class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
+            oninput="updateCalculations()"
+          >
+          <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+            <span>$200/mo</span>
+            <span>$6,000/mo</span>
+          </div>
         </div>
-    </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative bg-slate-900 text-white pt-16 pb-24 overflow-hidden border-b border-slate-800">
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-6">
-                <span>Self-Responsibility & Mutual Ownership</span>
-            </div>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
-                Eliminate Extractive Overhead.<br/>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Keep Your Hard-Earned Wealth.</span>
-            </h1>
-            <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                By transitioning banking, healthcare, and risk insurance into citizen-owned, at-cost utilities paired with a fair consumption tax and universal baseline prebate, the average family reduces fixed overhead by over 45%.
-            </p>
-            <div class="mt-10 flex flex-wrap justify-center gap-4">
-                <a href="#calculator" class="px-8 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base shadow-lg shadow-emerald-500/25 transition-all">
-                    Launch Interactive Calculator
-                </a>
-            </div>
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <label for="markupRate" class="text-sm font-semibold text-slate-700">
+              Estimated Intermediary & Retail Markup:
+            </label>
+            <span id="markupLabel" class="text-base font-extrabold text-slate-900">45%</span>
+          </div>
+          <input 
+            type="range" 
+            id="markupRate" 
+            min="20" 
+            max="65" 
+            step="1" 
+            value="45" 
+            class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
+            oninput="updateCalculations()"
+          >
+          <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+            <span>20% (Low friction)</span>
+            <span>65% (Extractive peak)</span>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- INTERACTIVE CALCULATOR SECTION -->
-    <section id="calculator" class="py-20 bg-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-2">Empirical Household Analysis</h2>
-                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Personal Cost-Reduction Calculator</h3>
-            </div>
+      <div class="bg-emerald-900 text-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-inner">
+        <div>
+          <span class="text-xs uppercase font-bold tracking-wider text-emerald-300">Projected Household Impact</span>
+          <div class="mt-4">
+            <p class="text-xs text-emerald-200">Direct At-Cost Monthly Spend</p>
+            <p id="newMonthlySpend" class="text-2xl font-bold text-white mt-1">$825 / mo</p>
+          </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
-                <!-- INPUT CONTROLS -->
-                <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-200/80 space-y-6">
-                    <h4 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center justify-between">
-                        <span>Household Profile Inputs</span>
-                        <i class="fa-solid fa-sliders text-emerald-500"></i>
-                    </h4>
+          <hr class="border-emerald-700/60 my-4">
 
-                    <!-- Gross Income -->
-                    <div>
-                        <div class="flex justify-between items-center text-sm font-semibold text-slate-700 mb-1.5">
-                            <label for="inputIncome">Gross Annual Income</label>
-                            <span id="labelIncome" class="text-emerald-700 font-bold bg-emerald-50 px-2.5 py-0.5 rounded">$85,000</span>
-                        </div>
-                        <input type="range" id="inputIncome" min="30000" max="300000" step="2500" value="85000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
-                    </div>
-
-                    <!-- Household Size -->
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-700 mb-2">Household Size (Persons)</label>
-                        <div class="grid grid-cols-6 gap-2" id="householdSizeBtns">
-                            <button type="button" data-size="1" class="size-btn py-2 text-sm font-bold rounded-lg border border-slate-300 text-slate-700">1</button>
-                            <button type="button" data-size="2" class="size-btn py-2 text-sm font-bold rounded-lg border border-slate-300 text-slate-700">2</button>
-                            <button type="button" data-size="3" class="size-btn py-2 text-sm font-bold rounded-lg border border-slate-300 text-slate-700">3</button>
-                            <button type="button" data-size="4" class="size-btn py-2 text-sm font-bold rounded-lg border border-emerald-600 bg-emerald-50 text-emerald-800">4</button>
-                            <button type="button" data-size="5" class="size-btn py-2 text-sm font-bold rounded-lg border border-slate-300 text-slate-700">5</button>
-                            <button type="button" data-size="6" class="size-btn py-2 text-sm font-bold rounded-lg border border-slate-300 text-slate-700">6+</button>
-                        </div>
-                        <input type="hidden" id="inputHouseholdSize" value="4">
-                    </div>
-
-                    <!-- Debt Balance -->
-                    <div>
-                        <div class="flex justify-between items-center text-sm font-semibold text-slate-700 mb-1.5">
-                            <label for="inputDebt">Mortgage / Core Debt Balance</label>
-                            <span id="labelDebt" class="text-emerald-700 font-bold bg-emerald-50 px-2.5 py-0.5 rounded">$350,000</span>
-                        </div>
-                        <input type="range" id="inputDebt" min="0" max="1000000" step="10000" value="350000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
-                    </div>
-
-                    <!-- Interest Rate -->
-                    <div>
-                        <div class="flex justify-between items-center text-sm font-semibold text-slate-700 mb-1.5">
-                            <label for="inputRate">Current Commercial Interest Rate</label>
-                            <span id="labelRate" class="text-slate-700 font-bold bg-slate-100 px-2.5 py-0.5 rounded">6.5%</span>
-                        </div>
-                        <input type="range" id="inputRate" min="3.0" max="10.0" step="0.1" value="6.5" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
-                    </div>
-
-                    <!-- Healthcare Costs -->
-                    <div>
-                        <div class="flex justify-between items-center text-sm font-semibold text-slate-700 mb-1.5">
-                            <label for="inputHealth">Current Healthcare (Prem + Out-of-Pocket)</label>
-                            <span id="labelHealth" class="text-slate-700 font-bold bg-slate-100 px-2.5 py-0.5 rounded">$13,600 / yr</span>
-                        </div>
-                        <input type="range" id="inputHealth" min="2000" max="35000" step="200" value="13600" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
-                    </div>
-
-                    <!-- Insurance Costs -->
-                    <div>
-                        <div class="flex justify-between items-center text-sm font-semibold text-slate-700 mb-1.5">
-                            <label for="inputInsurance">Current Property & Auto Insurance</label>
-                            <span id="labelInsurance" class="text-slate-700 font-bold bg-slate-100 px-2.5 py-0.5 rounded">$4,200 / yr</span>
-                        </div>
-                        <input type="range" id="inputInsurance" min="1000" max="15000" step="100" value="4200" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
-                    </div>
-
-                    <!-- Retail Consumption -->
-                    <div>
-                        <div class="flex justify-between items-center text-sm font-semibold text-slate-700 mb-1.5">
-                            <label for="inputSpend">Monthly Taxable Retail Spend</label>
-                            <span id="labelSpend" class="text-slate-700 font-bold bg-slate-100 px-2.5 py-0.5 rounded">$3,200 / mo</span>
-                        </div>
-                        <input type="range" id="inputSpend" min="1000" max="12000" step="100" value="3200" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
-                    </div>
-                </div>
-
-                <!-- RESULTS PANEL -->
-                <div class="lg:col-span-7 space-y-6">
-
-                    <!-- TOP SAVINGS BANNER -->
-                    <div class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-7 rounded-2xl shadow-xl">
-                        <div class="text-xs uppercase font-bold tracking-widest text-emerald-200">Total Net Household Benefit</div>
-                        <div class="mt-2 flex flex-wrap items-baseline gap-4">
-                            <span id="resultAnnualSavings" class="text-4xl sm:text-5xl font-black tracking-tight text-white">+$21,700</span>
-                            <span id="resultPctSavings" class="text-lg font-bold bg-white/20 px-3 py-1 rounded-full text-emerald-100">+48.4% Cost Reduction</span>
-                        </div>
-                        <p class="mt-3 text-sm text-emerald-100 font-medium">
-                            Adds <span id="resultMonthlyCash" class="font-bold text-white text-base">+$1,808/month</span> directly into liquid disposable income.
-                        </p>
-                    </div>
-
-                    <!-- COMPARISON LEDGER -->
-                    <div class="bg-white rounded-2xl shadow-lg border border-slate-200/80 overflow-hidden">
-                        <div class="grid grid-cols-2 bg-slate-900 text-white px-6 py-4 text-sm font-bold uppercase tracking-wider">
-                            <div>Current Commercial Model</div>
-                            <div class="text-emerald-400">At-Cost Mutualized Model</div>
-                        </div>
-
-                        <div class="divide-y divide-slate-100 p-6 space-y-5 text-sm">
-                            
-                            <!-- Tax Comparison -->
-                            <div class="grid grid-cols-2 gap-4 pt-1">
-                                <div>
-                                    <div class="text-xs font-semibold text-slate-500 uppercase">Federal Income & FICA Tax</div>
-                                    <div id="rowCurrentTax" class="text-lg font-bold text-slate-800 mt-0.5">$14,025</div>
-                                </div>
-                                <div>
-                                    <div class="text-xs font-semibold text-emerald-700 uppercase">Net Consumption Tax</div>
-                                    <div id="rowAtCostTax" class="text-lg font-bold text-emerald-700 mt-0.5">$2,088</div>
-                                    <span class="text-xs text-slate-500">Includes <span id="rowPrebateCredit" class="font-semibold text-emerald-600">-$9,360</span> prebate</span>
-                                </div>
-                            </div>
-
-                            <!-- Healthcare Comparison -->
-                            <div class="grid grid-cols-2 gap-4 pt-4">
-                                <div>
-                                    <div class="text-xs font-semibold text-slate-500 uppercase">Commercial Healthcare</div>
-                                    <div id="rowCurrentHealth" class="text-lg font-bold text-slate-800 mt-0.5">$13,600</div>
-                                </div>
-                                <div>
-                                    <div class="text-xs font-semibold text-emerald-700 uppercase">Direct Cost Health Trust</div>
-                                    <div id="rowAtCostHealth" class="text-lg font-bold text-emerald-700 mt-0.5">$7,888</div>
-                                </div>
-                            </div>
-
-                            <!-- Interest Comparison -->
-                            <div class="grid grid-cols-2 gap-4 pt-4">
-                                <div>
-                                    <div class="text-xs font-semibold text-slate-500 uppercase">Commercial Loan Interest</div>
-                                    <div id="rowCurrentInterest" class="text-lg font-bold text-slate-800 mt-0.5">$22,750</div>
-                                </div>
-                                <div>
-                                    <div class="text-xs font-semibold text-emerald-700 uppercase">At-Cost Public Credit (0.75%)</div>
-                                    <div id="rowAtCostInterest" class="text-lg font-bold text-emerald-700 mt-0.5">$2,625</div>
-                                </div>
-                            </div>
-
-                            <!-- Insurance Comparison -->
-                            <div class="grid grid-cols-2 gap-4 pt-4">
-                                <div>
-                                    <div class="text-xs font-semibold text-slate-500 uppercase">For-Profit Risk Insurance</div>
-                                    <div id="rowCurrentInsurance" class="text-lg font-bold text-slate-800 mt-0.5">$4,200</div>
-                                </div>
-                                <div>
-                                    <div class="text-xs font-semibold text-emerald-700 uppercase">Mutual Risk Reserve Pool</div>
-                                    <div id="rowAtCostInsurance" class="text-lg font-bold text-emerald-700 mt-0.5">$2,100</div>
-                                </div>
-                            </div>
-
-                            <!-- Total Summary Row -->
-                            <div class="grid grid-cols-2 gap-4 pt-5 border-t-2 border-slate-200">
-                                <div class="bg-rose-50 p-4 rounded-xl">
-                                    <div class="text-xs font-bold text-rose-800 uppercase tracking-wide">Total Extracted Burden</div>
-                                    <div id="rowCurrentTotal" class="text-2xl font-black text-rose-900 mt-1">$54,575 / yr</div>
-                                </div>
-                                <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200">
-                                    <div class="text-xs font-bold text-emerald-800 uppercase tracking-wide">Total At-Cost Burden</div>
-                                    <div id="rowAtCostTotal" class="text-2xl font-black text-emerald-900 mt-1">$14,701 / yr</div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+          <div>
+            <p class="text-xs text-emerald-200">Monthly Net Savings</p>
+            <p id="monthlySavings" class="text-3xl sm:text-4xl font-black text-emerald-300 mt-1">$675 / mo</p>
+          </div>
         </div>
-    </section>
 
-    <!-- CALCULATION ENGINE SCRIPT -->
-    <script>
-        const inputIncome = document.getElementById('inputIncome');
-        const inputHouseholdSize = document.getElementById('inputHouseholdSize');
-        const inputDebt = document.getElementById('inputDebt');
-        const inputRate = document.getElementById('inputRate');
-        const inputHealth = document.getElementById('inputHealth');
-        const inputInsurance = document.getElementById('inputInsurance');
-        const inputSpend = document.getElementById('inputSpend');
+        <div class="mt-6 pt-4 border-t border-emerald-700/60 flex items-center justify-between">
+          <span class="text-xs sm:text-sm font-medium text-emerald-100">Annual Retained Liquidity:</span>
+          <span id="annualSavings" class="text-xl sm:text-2xl font-black text-white">$8,100 / yr</span>
+        </div>
+      </div>
 
-        const labelIncome = document.getElementById('labelIncome');
-        const labelDebt = document.getElementById('labelDebt');
-        const labelRate = document.getElementById('labelRate');
-        const labelHealth = document.getElementById('labelHealth');
-        const labelInsurance = document.getElementById('labelInsurance');
-        const labelSpend = document.getElementById('labelSpend');
+    </div>
+  </section>
 
-        const resultAnnualSavings = document.getElementById('resultAnnualSavings');
-        const resultPctSavings = document.getElementById('resultPctSavings');
-        const resultMonthlyCash = document.getElementById('resultMonthlyCash');
+</div>
 
-        const rowCurrentTax = document.getElementById('rowCurrentTax');
-        const rowAtCostTax = document.getElementById('rowAtCostTax');
-        const rowPrebateCredit = document.getElementById('rowPrebateCredit');
-        const rowCurrentHealth = document.getElementById('rowCurrentHealth');
-        const rowAtCostHealth = document.getElementById('rowAtCostHealth');
-        const rowCurrentInterest = document.getElementById('rowCurrentInterest');
-        const rowAtCostInterest = document.getElementById('rowAtCostInterest');
-        const rowCurrentInsurance = document.getElementById('rowCurrentInsurance');
-        const rowAtCostInsurance = document.getElementById('rowAtCostInsurance');
-        const rowCurrentTotal = document.getElementById('rowCurrentTotal');
-        const rowAtCostTotal = document.getElementById('rowAtCostTotal');
+<script>
+  function updateCalculations() {
+    const spend = parseFloat(document.getElementById('monthlySpend').value);
+    const markup = parseFloat(document.getElementById('markupRate').value) / 100;
 
-        const sizeBtns = document.querySelectorAll('.size-btn');
+    // Direct cost calculation: Spend - (Spend * markup)
+    const monthlySavingsVal = spend * markup;
+    const directCostVal = spend - monthlySavingsVal;
+    const annualSavingsVal = monthlySavingsVal * 12;
 
-        function formatUSD(val) {
-            return '$' + Math.round(val).toLocaleString('en-US');
-        }
+    // Update Slider Labels
+    document.getElementById('spendLabel').textContent = `$${spend.toLocaleString()}`;
+    document.getElementById('markupLabel').textContent = `${Math.round(markup * 100)}%`;
 
-        function recalculate() {
-            const income = parseFloat(inputIncome.value);
-            const size = parseInt(inputHouseholdSize.value);
-            const debt = parseFloat(inputDebt.value);
-            const rate = parseFloat(inputRate.value) / 100.0;
-            const health = parseFloat(inputHealth.value);
-            const insurance = parseFloat(inputInsurance.value);
-            const monthlySpend = parseFloat(inputSpend.value);
+    // Update Outcome Displays
+    document.getElementById('newMonthlySpend').textContent = `$${Math.round(directCostVal).toLocaleString()} / mo`;
+    document.getElementById('monthlySavings').textContent = `$${Math.round(monthlySavingsVal).toLocaleString()} / mo`;
+    document.getElementById('annualSavings').textContent = `$${Math.round(annualSavingsVal).toLocaleString()} / yr`;
+  }
 
-            labelIncome.textContent = formatUSD(income);
-            labelDebt.textContent = formatUSD(debt);
-            labelRate.textContent = (rate * 100).toFixed(1) + '%';
-            labelHealth.textContent = formatUSD(health) + ' / yr';
-            labelInsurance.textContent = formatUSD(insurance) + ' / yr';
-            labelSpend.textContent = formatUSD(monthlySpend) + ' / mo';
-
-            // 1. Current Burden
-            const currentTax = income * 0.165;
-            const currentInterest = debt * rate;
-            const currentHealth = health;
-            const currentInsurance = insurance;
-            const currentTotal = currentTax + currentInterest + currentHealth + currentInsurance;
-
-            // 2. At-Cost Burden
-            const fpl = 15060 + (Math.max(1, size) - 1) * 5380;
-            const consumptionTaxRate = 0.30;
-            const annualPrebate = fpl * consumptionTaxRate;
-            const grossConsumptionTax = (monthlySpend * 12) * consumptionTaxRate;
-            const atCostTax = Math.max(0, grossConsumptionTax - annualPrebate);
-
-            const atCostInterest = debt * 0.0075;
-            const atCostHealth = health * 0.58;
-            const atCostInsurance = insurance * 0.50;
-            const atCostTotal = atCostTax + atCostInterest + atCostHealth + atCostInsurance;
-
-            // 3. Savings Calculations
-            const annualSavings = currentTotal - atCostTotal;
-            const monthlyCash = annualSavings / 12;
-            const pctSavings = currentTotal > 0 ? (annualSavings / currentTotal) * 100 : 0;
-
-            // Update UI
-            resultAnnualSavings.textContent = '+' + formatUSD(annualSavings);
-            resultPctSavings.textContent = '+' + pctSavings.toFixed(1) + '% Cost Reduction';
-            resultMonthlyCash.textContent = '+' + formatUSD(monthlyCash) + '/month';
-
-            rowCurrentTax.textContent = formatUSD(currentTax);
-            rowAtCostTax.textContent = formatUSD(atCostTax);
-            rowPrebateCredit.textContent = '-' + formatUSD(annualPrebate);
-
-            rowCurrentHealth.textContent = formatUSD(currentHealth);
-            rowAtCostHealth.textContent = formatUSD(atCostHealth);
-
-            rowCurrentInterest.textContent = formatUSD(currentInterest);
-            rowAtCostInterest.textContent = formatUSD(atCostInterest);
-
-            rowCurrentInsurance.textContent = formatUSD(currentInsurance);
-            rowAtCostInsurance.textContent = formatUSD(atCostInsurance);
-
-            rowCurrentTotal.textContent = formatUSD(currentTotal) + ' / yr';
-            rowAtCostTotal.textContent = formatUSD(atCostTotal) + ' / yr';
-        }
-
-        sizeBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                sizeBtns.forEach(b => {
-                    b.classList.remove('border-emerald-600', 'bg-emerald-50', 'text-emerald-800');
-                    b.classList.add('border-slate-300', 'text-slate-700');
-                });
-                btn.classList.add('border-emerald-600', 'bg-emerald-50', 'text-emerald-800');
-                btn.classList.remove('border-slate-300', 'text-slate-700');
-                inputHouseholdSize.value = btn.getAttribute('data-size');
-                recalculate();
-            });
-        });
-
-        [inputIncome, inputDebt, inputRate, inputHealth, inputInsurance, inputSpend].forEach(slider => {
-            slider.addEventListener('input', recalculate);
-        });
-
-        recalculate();
-    </script>
-</body>
-</html>
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', updateCalculations);
+</script>
