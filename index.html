@@ -8,6 +8,7 @@
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen antialiased">
 
+  <!-- Top Navigation Header -->
   <header class="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
@@ -24,58 +25,95 @@
     </div>
   </header>
 
-  <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <!-- Hero Section -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="text-center max-w-3xl mx-auto">
       <span class="text-xs font-semibold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
-        Economic Architecture
+        Structural Economic Reform
       </span>
       <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mt-4">
         The Mutualized At-Cost Economy
       </h1>
       <p class="mt-4 text-lg text-gray-600 leading-relaxed">
-        A structural economic framework designed to eliminate compounding intermediary extraction, lower essential cost-of-living burdens, and restore household purchasing power.
+        Eliminating compounding intermediary extraction by placing core production, distribution, and financial infrastructure directly into member-owned, at-cost stewardship.
       </p>
     </div>
 
+    <!-- The 4 Pillars Grid -->
+    <div class="mt-14">
+      <h2 class="text-center text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">The Four Foundational Pillars</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Pillar 1 -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-sm mb-4">1</div>
+            <h3 class="text-base font-bold text-gray-900 mb-2">Member-Owned Finance & Credit</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Publicly held credit unions, cooperative lending facilities, and mutualized insurance eliminating secondary securitization spreads and usurious debt overhead.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-sm mb-4">2</div>
+            <h3 class="text-base font-bold text-gray-900 mb-2">At-Cost Essential Supply Chains</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Wholesale distribution direct from producers to consumer tables, stripping out multi-tiered intermediary markups across staple foodstuffs and retail goods.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-sm mb-4">3</div>
+            <h3 class="text-base font-bold text-gray-900 mb-2">Non-Extractive Housing & Land</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Community land trusts and at-cost development financing that isolate residential shelter from institutional speculation and yield-chasing equity funds.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-sm mb-4">4</div>
+            <h3 class="text-base font-bold text-gray-900 mb-2">Universal Cooperative Healthcare</h3>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Provider-patient mutual networks delivering clinical care, pharmaceuticals, and diagnostics without private equity extraction or middleman friction.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Quick Navigation Cards -->
     <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">The Manifesto</h2>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            Examine the foundational economic theory, structural cost breakdowns, and the cooperative framework replacing debt-driven pricing models.
-          </p>
-        </div>
-        <a href="manifesto.html" class="mt-6 inline-flex items-center text-sm font-semibold text-blue-700 hover:text-blue-900">
-          Read White Paper &rarr;
-        </a>
+      <div class="bg-blue-50 border border-blue-200 p-6 rounded-xl">
+        <h3 class="font-bold text-blue-900 text-lg mb-2">The White Paper</h3>
+        <p class="text-sm text-blue-800 leading-relaxed mb-4">Examine the mathematical mechanics and economic governance behind all four pillars.</p>
+        <a href="manifesto.html" class="text-sm font-semibold text-blue-700 hover:text-blue-900">&rarr; Read Manifesto</a>
       </div>
 
-      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">Interactive Calculator</h2>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            Simulate monthly household savings across healthcare, housing, energy, and retail under an at-cost delivery structure.
-          </p>
-        </div>
-        <a href="calculator.html" class="mt-6 inline-flex items-center text-sm font-semibold text-blue-700 hover:text-blue-900">
-          Open Calculator &rarr;
-        </a>
+      <div class="bg-blue-50 border border-blue-200 p-6 rounded-xl">
+        <h3 class="font-bold text-blue-900 text-lg mb-2">Household Calculator</h3>
+        <p class="text-sm text-blue-800 leading-relaxed mb-4">Simulate how member-owned financial institutions and at-cost logistics reduce your monthly expenses.</p>
+        <a href="calculator.html" class="text-sm font-semibold text-blue-700 hover:text-blue-900">&rarr; Open Calculator</a>
       </div>
 
-      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
-        <div>
-          <h2 class="text-lg font-bold text-gray-900 mb-2">Macro Budget</h2>
-          <p class="text-sm text-gray-600 leading-relaxed">
-            Review the macroeconomic ledger, public balance sheet metrics, and total system savings aggregated across national sectors.
-          </p>
-        </div>
-        <a href="macro-budget.html" class="mt-6 inline-flex items-center text-sm font-semibold text-blue-700 hover:text-blue-900">
-          View Macro Ledger &rarr;
-        </a>
+      <div class="bg-blue-50 border border-blue-200 p-6 rounded-xl">
+        <h3 class="font-bold text-blue-900 text-lg mb-2">Macroeconomic Ledger</h3>
+        <p class="text-sm text-blue-800 leading-relaxed mb-4">Review the multi-trillion dollar aggregate reclaim across national household balance sheets.</p>
+        <a href="macro-budget.html" class="text-sm font-semibold text-blue-700 hover:text-blue-900">&rarr; View Macro Ledger</a>
       </div>
     </div>
   </main>
 
+  <!-- Bottom Footer -->
   <footer class="w-full bg-white border-t border-gray-200 py-8">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
       <p class="font-medium text-gray-700">A New America &bull; Mutualized At-Cost Economic Framework</p>
