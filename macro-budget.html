@@ -8,6 +8,7 @@
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen antialiased">
 
+  <!-- Top Navigation Header -->
   <header class="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
@@ -24,55 +25,65 @@
     </div>
   </header>
 
+  <!-- Main Ledger Container -->
   <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
     <div class="mb-8">
       <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">Macroeconomic Ledger Breakdown</h1>
-      <p class="text-sm text-gray-600 mt-2">Aggregate national estimates comparing status-quo extraction versus at-cost mutualized delivery across major economic sectors.</p>
+      <p class="text-sm text-gray-600 mt-2">Aggregate national estimates across the 4 Pillars comparing status-quo financial extraction against member-owned, at-cost operations.</p>
     </div>
 
+    <!-- Structured Data Table -->
     <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
       <div class="overflow-x-auto">
         <table class="w-full text-left text-sm">
           <thead class="bg-gray-50 border-b border-gray-200 text-gray-600 uppercase text-xs tracking-wider">
             <tr>
-              <th scope="col" class="py-3.5 px-6 font-semibold">Sector / Category</th>
-              <th scope="col" class="py-3.5 px-6 font-semibold">Baseline Cost Basis</th>
-              <th scope="col" class="py-3.5 px-6 font-semibold">Projected At-Cost Basis</th>
-              <th scope="col" class="py-3.5 px-6 font-semibold text-emerald-700">Estimated Reclaimed Capital</th>
+              <th scope="col" class="py-3.5 px-6 font-semibold">Pillar / Sector</th>
+              <th scope="col" class="py-3.5 px-6 font-semibold">Current System Cost Basis</th>
+              <th scope="col" class="py-3.5 px-6 font-semibold">At-Cost Mutualized Basis</th>
+              <th scope="col" class="py-3.5 px-6 font-semibold text-emerald-700">Reclaimed Public Capital</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-200 text-gray-700 font-mono text-xs sm:text-sm">
             <tr>
-              <td class="py-4 px-6 font-sans font-medium text-gray-900">Healthcare Delivery & RX</td>
-              <td class="py-4 px-6">$4.5 Trillion</td>
-              <td class="py-4 px-6">$2.7 Trillion</td>
-              <td class="py-4 px-6 text-emerald-600 font-semibold">$1.8 Trillion</td>
+              <td class="py-4 px-6 font-sans font-medium text-gray-900">
+                <strong>Pillar 1:</strong> Financial System, Banking & Insurances
+              </td>
+              <td class="py-4 px-6">$2.85 Trillion</td>
+              <td class="py-4 px-6">$1.14 Trillion</td>
+              <td class="py-4 px-6 text-emerald-600 font-semibold">$1.71 Trillion</td>
             </tr>
             <tr class="bg-gray-50/50">
-              <td class="py-4 px-6 font-sans font-medium text-gray-900">Residential Housing & Capital Service</td>
-              <td class="py-4 px-6">$3.2 Trillion</td>
-              <td class="py-4 px-6">$2.4 Trillion</td>
-              <td class="py-4 px-6 text-emerald-600 font-semibold">$800 Billion</td>
-            </tr>
-            <tr>
-              <td class="py-4 px-6 font-sans font-medium text-gray-900">Essential Retail & Logistics</td>
-              <td class="py-4 px-6">$2.1 Trillion</td>
+              <td class="py-4 px-6 font-sans font-medium text-gray-900">
+                <strong>Pillar 2:</strong> Essential Supply Chains & Food Logistics
+              </td>
+              <td class="py-4 px-6">$2.10 Trillion</td>
               <td class="py-4 px-6">$1.47 Trillion</td>
               <td class="py-4 px-6 text-emerald-600 font-semibold">$630 Billion</td>
             </tr>
+            <tr>
+              <td class="py-4 px-6 font-sans font-medium text-gray-900">
+                <strong>Pillar 3:</strong> Residential Housing & Municipal Land
+              </td>
+              <td class="py-4 px-6">$3.20 Trillion</td>
+              <td class="py-4 px-6">$2.40 Trillion</td>
+              <td class="py-4 px-6 text-emerald-600 font-semibold">$800 Billion</td>
+            </tr>
             <tr class="bg-gray-50/50">
-              <td class="py-4 px-6 font-sans font-medium text-gray-900">Energy & Municipal Utilities</td>
-              <td class="py-4 px-6">$1.4 Trillion</td>
-              <td class="py-4 px-6">$1.12 Trillion</td>
-              <td class="py-4 px-6 text-emerald-600 font-semibold">$280 Billion</td>
+              <td class="py-4 px-6 font-sans font-medium text-gray-900">
+                <strong>Pillar 4:</strong> Healthcare Delivery & Pharmaceuticals
+              </td>
+              <td class="py-4 px-6">$4.50 Trillion</td>
+              <td class="py-4 px-6">$2.47 Trillion</td>
+              <td class="py-4 px-6 text-emerald-600 font-semibold">$2.03 Trillion</td>
             </tr>
           </tbody>
           <tfoot class="bg-blue-900 text-white font-semibold">
             <tr>
-              <td class="py-4 px-6 font-sans">Total Aggregate Reclaimed</td>
-              <td class="py-4 px-6 font-mono">$11.2 Trillion</td>
-              <td class="py-4 px-6 font-mono">$7.69 Trillion</td>
-              <td class="py-4 px-6 font-mono text-emerald-400 font-bold">$3.51 Trillion / yr</td>
+              <td class="py-4 px-6 font-sans">Total Annual Reclaimed Capital</td>
+              <td class="py-4 px-6 font-mono">$12.65 Trillion</td>
+              <td class="py-4 px-6 font-mono">$7.48 Trillion</td>
+              <td class="py-4 px-6 font-mono text-emerald-400 font-bold">$5.17 Trillion / yr</td>
             </tr>
           </tfoot>
         </table>
@@ -80,6 +91,7 @@
     </div>
   </main>
 
+  <!-- Bottom Footer -->
   <footer class="w-full bg-white border-t border-gray-200 py-8">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
       <p class="font-medium text-gray-700">A New America &bull; Mutualized At-Cost Economic Framework</p>
