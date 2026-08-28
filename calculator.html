@@ -4,6 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Household Savings Calculator | A New America</title>
+
+  <meta name="description" content="See how much your household would save if banking, insurance, housing, and healthcare ran at-cost instead of for profit.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anewamerica.info/calculator.html">
+  <meta property="og:title" content="Household Savings Calculator">
+  <meta property="og:description" content="Plug in your own numbers and see what you'd get back every year.">
+  <meta property="og:image" content="https://anewamerica.info/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Household Savings Calculator">
+  <meta name="twitter:description" content="Plug in your own numbers and see what you'd get back every year.">
+  <meta name="twitter:image" content="https://anewamerica.info/og-image.png">
+
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen antialiased">
@@ -37,11 +53,11 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       <!-- Input Controls -->
       <div class="lg:col-span-2 bg-white p-6 sm:p-8 rounded-xl border border-gray-200 shadow-sm space-y-6">
-        
+
         <!-- Pillar 1 Financial Inputs -->
         <div class="border-b border-gray-100 pb-6">
           <span class="text-xs font-bold uppercase tracking-wider text-blue-700">Pillar 1: Member-Owned Finance & Debt</span>
-          
+
           <div class="mt-4">
             <div class="flex justify-between text-sm font-semibold text-gray-800 mb-1">
               <label for="input-finance">Monthly Debt Service (Mortgage Interest, Auto Loans, Credit Cards)</label>
@@ -99,7 +115,7 @@
       <div class="bg-blue-950 text-white p-6 sm:p-8 rounded-xl shadow-lg flex flex-col justify-between">
         <div>
           <span class="text-xs font-semibold uppercase tracking-wider text-blue-300">Reclaimed Capital</span>
-          
+
           <div class="mt-6">
             <span class="text-xs text-blue-200 uppercase tracking-wide">Monthly Cashflow Restored</span>
             <div id="display-monthly" class="text-4xl font-extrabold text-white mt-1">$1,812</div>
@@ -122,9 +138,20 @@
           </div>
         </div>
 
-        <p class="text-xs text-blue-300 mt-8 leading-relaxed">
-          Because member-owned financial institutions distribute surplus revenue back as reduced interest rates or member equity credits, money stays entirely within the working household economy.
-        </p>
+        <!-- SHARE: this is the viral mechanic -->
+        <div class="mt-8 pt-6 border-t border-blue-800 space-y-3">
+          <p class="text-xs text-blue-300">Share your number:</p>
+          <div class="flex gap-2">
+            <a id="share-twitter" target="_blank" rel="noopener"
+               class="flex-1 text-center text-xs font-semibold bg-white text-blue-900 rounded-lg py-2.5 hover:bg-blue-100 transition-colors">
+              Share on X
+            </a>
+            <button id="share-copy"
+               class="flex-1 text-center text-xs font-semibold border border-blue-700 text-blue-100 rounded-lg py-2.5 hover:bg-blue-900 transition-colors">
+              Copy My Link
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -152,6 +179,21 @@
     const health = document.getElementById('input-health');
     const goods = document.getElementById('input-goods');
 
+    const inputs = { finance, insurance, housing, health, goods };
+
+    // Prefill sliders from a shared link, e.g. calculator.html?finance=1500&insurance=400...
+    const params = new URLSearchParams(window.location.search);
+    Object.entries(inputs).forEach(([key, el]) => {
+      const val = params.get(key);
+      if (val !== null && !isNaN(val)) el.value = val;
+    });
+
+    function buildShareUrl(annualSavings) {
+      const url = new URL('https://anewamerica.info/calculator.html');
+      Object.entries(inputs).forEach(([key, el]) => url.searchParams.set(key, el.value));
+      return url.toString();
+    }
+
     function calculate() {
       const fVal = parseFloat(finance.value);
       const iVal = parseFloat(insurance.value);
@@ -168,7 +210,7 @@
       // Calculations:
       // Pillar 1: 55% saved on interest/finance fees, 35% on insurance overhead
       const financeSavings = (fVal * 0.55) + (iVal * 0.35);
-      
+
       // Pillars 2, 3, 4:
       const otherSavings = (hVal * 0.25) + (mVal * 0.45) + (gVal * 0.30);
 
@@ -179,9 +221,23 @@
       document.getElementById('display-annual').innerText = fmt.format(totalAnnual);
       document.getElementById('display-breakdown-finance').innerText = fmt.format(financeSavings) + '/mo';
       document.getElementById('display-breakdown-goods').innerText = fmt.format(otherSavings) + '/mo';
+
+      // Update share links with the live, personalized number
+      const shareUrl = buildShareUrl(totalAnnual);
+      const tweetText = `I'd save ${fmt.format(totalAnnual)}/year if banking, insurance & healthcare ran at-cost instead of for profit. See your number:`;
+      document.getElementById('share-twitter').href =
+        `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(shareUrl)}`;
+
+      document.getElementById('share-copy').onclick = () => {
+        navigator.clipboard.writeText(shareUrl);
+        const btn = document.getElementById('share-copy');
+        const original = btn.innerText;
+        btn.innerText = 'Copied!';
+        setTimeout(() => (btn.innerText = original), 1500);
+      };
     }
 
-    [finance, insurance, housing, health, goods].forEach(el => el.addEventListener('input', calculate));
+    Object.values(inputs).forEach(el => el.addEventListener('input', calculate));
     calculate();
   </script>
 
