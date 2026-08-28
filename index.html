@@ -3,7 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A New America | Mutualized At-Cost Economy</title>
+  <title>A New America | See How Much You'd Save</title>
+
+  <!-- SEO -->
+  <meta name="description" content="The average household could reclaim $20,000+/year by removing Wall Street, insurer, and PBM tolls from banking, healthcare, and housing. Try the calculator.">
+
+  <!-- Open Graph (Facebook, LinkedIn, iMessage, Discord, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anewamerica.info/">
+  <meta property="og:title" content="How Much Money Is the System Costing You?">
+  <meta property="og:description" content="Plug in your numbers. See what you'd get back if banking, healthcare, and insurance ran at-cost instead of for profit.">
+  <meta property="og:image" content="https://anewamerica.info/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Much Money Is the System Costing You?">
+  <meta name="twitter:description" content="Plug in your numbers. See what you'd get back if banking, healthcare, and insurance ran at-cost instead of for profit.">
+  <meta name="twitter:image" content="https://anewamerica.info/og-image.png">
+
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen antialiased">
@@ -25,22 +44,68 @@
   </header>
 
   <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- HERO: leads with a number, not a policy term -->
     <div class="text-center max-w-3xl mx-auto">
       <span class="text-xs font-semibold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
         Structural Economic Blueprint
       </span>
       <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mt-4">
-        The Mutualized At-Cost Economy
+        The average household is losing
+        <span class="text-blue-700">$20,000+ a year</span>
+        to financial middlemen.
       </h1>
       <p class="mt-4 text-lg text-gray-600 leading-relaxed">
-        Eliminating compounding intermediary tolls by returning banking, healthcare, property risk, and sovereign administration directly to at-cost public stewardship.
+        Banking spreads, insurance margins, and healthcare markups quietly drain household income every month.
+        Enter your own numbers and see exactly what you'd get back.
       </p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="calculator.html" class="w-full sm:w-auto inline-block bg-blue-700 hover:bg-blue-800 text-white font-bold text-base px-8 py-3.5 rounded-lg shadow-sm transition-colors">
+          Calculate My Savings &rarr;
+        </a>
+        <a href="manifesto.html" class="w-full sm:w-auto inline-block text-blue-700 font-semibold text-sm hover:text-blue-900">
+          Read the full plan
+        </a>
+      </div>
+    </div>
+
+    <!-- SHARE BAR: put sharing at the top, not buried at the bottom -->
+    <div class="mt-10 flex items-center justify-center gap-3 text-sm">
+      <span class="text-gray-500">Share this:</span>
+      <a target="_blank" rel="noopener"
+         href="https://twitter.com/intent/tweet?text=The%20average%20household%20is%20losing%20%2420%2C000%2Fyear%20to%20financial%20middlemen.%20See%20what%20you%27d%20save%3A&url=https://anewamerica.info/"
+         class="px-3 py-1.5 rounded-full border border-gray-300 hover:border-blue-400 hover:text-blue-700 transition-colors">
+        Share on X
+      </a>
+      <a target="_blank" rel="noopener"
+         href="https://www.facebook.com/sharer/sharer.php?u=https://anewamerica.info/"
+         class="px-3 py-1.5 rounded-full border border-gray-300 hover:border-blue-400 hover:text-blue-700 transition-colors">
+        Share on Facebook
+      </a>
+      <button onclick="navigator.clipboard.writeText('https://anewamerica.info/'); this.innerText='Copied!'"
+         class="px-3 py-1.5 rounded-full border border-gray-300 hover:border-blue-400 hover:text-blue-700 transition-colors">
+        Copy Link
+      </button>
+    </div>
+
+    <!-- FEATURED CARD: calculator promoted above the pillars -->
+    <div class="mt-14">
+      <a href="calculator.html" class="block bg-blue-950 text-white rounded-2xl p-8 sm:p-10 shadow-lg hover:shadow-xl transition-shadow">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="text-center sm:text-left">
+            <span class="text-xs font-semibold uppercase tracking-wider text-blue-300">30-Second Calculator</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold mt-2">What would YOU get back?</h2>
+            <p class="text-blue-200 mt-2 text-sm max-w-lg">Adjust sliders for your own debt, insurance, housing, and healthcare costs to see your personal number.</p>
+          </div>
+          <span class="shrink-0 bg-white text-blue-900 font-bold px-6 py-3 rounded-lg">Open Calculator &rarr;</span>
+        </div>
+      </a>
     </div>
 
     <div class="mt-14">
       <h2 class="text-center text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">The Four Foundational Pillars</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        
+
         <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
           <div>
             <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-sm mb-4">1</div>
@@ -84,17 +149,11 @@
       </div>
     </div>
 
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="bg-blue-50 border border-blue-200 p-6 rounded-xl">
         <h3 class="font-bold text-blue-900 text-lg mb-2">The White Paper</h3>
         <p class="text-sm text-blue-800 leading-relaxed mb-4">Examine the mathematical mechanics and economic governance behind all four pillars.</p>
         <a href="manifesto.html" class="text-sm font-semibold text-blue-700 hover:text-blue-900">&rarr; Read Manifesto</a>
-      </div>
-
-      <div class="bg-blue-50 border border-blue-200 p-6 rounded-xl">
-        <h3 class="font-bold text-blue-900 text-lg mb-2">Household Calculator</h3>
-        <p class="text-sm text-blue-800 leading-relaxed mb-4">Simulate how member-owned banking, healthcare reform, and property pooling restore your monthly income.</p>
-        <a href="calculator.html" class="text-sm font-semibold text-blue-700 hover:text-blue-900">&rarr; Open Calculator</a>
       </div>
 
       <div class="bg-blue-50 border border-blue-200 p-6 rounded-xl">
