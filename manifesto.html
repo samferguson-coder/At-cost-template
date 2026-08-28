@@ -1,374 +1,80 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Economic Manifesto | A New America</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen antialiased">
 
-    <!-- NAVIGATION -->
-    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <a href="index.html" class="w-9 h-9 rounded-lg bg-emerald-500 flex items-center justify-center text-slate-950 font-bold text-lg shadow-md">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                </a>
-                <div>
-                    <span class="text-lg font-bold tracking-tight text-white">The At-Cost Economy</span>
-                    <span class="hidden sm:inline-block text-xs bg-emerald-500/20 text-emerald-400 font-medium px-2 py-0.5 rounded ml-2 border border-emerald-500/30">Theoretical Framework</span>
-                </div>
-            </div>
-            <nav class="flex items-center space-x-6 text-sm font-medium">
-                <a href="calculator.html" class="text-slate-300 hover:text-emerald-400 transition-colors">Calculator</a>
-                <a href="#thesis" class="text-slate-300 hover:text-emerald-400 transition-colors">Thesis</a>
-                <a href="#pillars" class="text-slate-300 hover:text-emerald-400 transition-colors">4 Pillars</a>
-                <a href="#macro" class="text-slate-300 hover:text-emerald-400 transition-colors">Fiscal Model</a>
-                <a href="#roadmap" class="text-slate-300 hover:text-emerald-400 transition-colors">Roadmap</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- HERO / TITLE -->
-    <section class="bg-slate-900 text-white pt-20 pb-20 border-b border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-6">
-                <span>Public Structural Blueprint</span>
-            </div>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-                The Self-Sustaining <br class="hidden sm:inline" />
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">At-Cost Economy</span>
-            </h1>
-            <p class="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
-                A macroeconomic architecture for mutualizing non-discretionary necessities, removing financialized rent extraction, and un-taxing human productivity.
-            </p>
-        </div>
-    </section>
-
-    <!-- MAIN BODY CONTENT -->
-    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
-
-        <!-- 1. EXECUTIVE SUMMARY & THESIS -->
-        <section id="thesis" class="scroll-mt-24">
-            <div class="flex items-center space-x-3 mb-6">
-                <span class="text-emerald-600 font-mono font-bold text-sm">01.</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Executive Summary & Core Thesis</h2>
-            </div>
-            <div class="prose prose-slate max-w-none text-slate-600 text-base sm:text-lg leading-relaxed space-y-5">
-                <p>
-                    Modern market economies suffer from a systemic design flaw: <strong class="text-slate-900">the extraction of private rents from non-discretionary human necessities</strong>. When access to shelter, basic liquidity, healthcare, and risk mitigation is conditioned on maximizing shareholder yield, the result is structural price inflation, wage stagnation, and escalating household debt.
-                </p>
-                <p>
-                    The <strong class="text-emerald-700">At-Cost Economy</strong> is a macroeconomic architecture designed to eliminate extractive friction from the baseline foundations of society without compromising private enterprise, price signals, or personal liberty. By converting four non-discretionary sectors into citizen-owned, at-cost public trusts and replacing the administrative deadweight of the tax code with a consumption levy paired with a universal prebate, the model restores direct purchasing power to the household.
-                </p>
-            </div>
-
-            <!-- Framework Grid Callout -->
-            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="p-5 rounded-xl bg-slate-100 border border-slate-200">
-                    <div class="font-bold text-slate-900 text-sm flex items-center space-x-2">
-                        <i class="fa-solid fa-building-columns text-emerald-600"></i>
-                        <span>0.75% Public Credit</span>
-                    </div>
-                    <p class="mt-1.5 text-xs text-slate-600">Eliminates compounding mortgage interest rents and financialized secondary debt extraction.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-slate-100 border border-slate-200">
-                    <div class="font-bold text-slate-900 text-sm flex items-center space-x-2">
-                        <i class="fa-solid fa-heart-pulse text-emerald-600"></i>
-                        <span>Direct Medical Trust</span>
-                    </div>
-                    <p class="mt-1.5 text-xs text-slate-600">Strips administrative billing bloat, middleman denial incentives, and corporate overhead.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-slate-100 border border-slate-200">
-                    <div class="font-bold text-slate-900 text-sm flex items-center space-x-2">
-                        <i class="fa-solid fa-shield-halved text-emerald-600"></i>
-                        <span>Mutualized Risk Reserves</span>
-                    </div>
-                    <p class="mt-1.5 text-xs text-slate-600">Operates property and casualty pools at cost; undistributed capital stays in public reserve.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-slate-100 border border-slate-200">
-                    <div class="font-bold text-slate-900 text-sm flex items-center space-x-2">
-                        <i class="fa-solid fa-receipt text-emerald-600"></i>
-                        <span>Consumption Prebate</span>
-                    </div>
-                    <p class="mt-1.5 text-xs text-slate-600">Eliminates income/payroll tax entirely while untaxing basic necessities up to the poverty line.</p>
-                </div>
-            </div>
-        </section>
-
-        <hr class="border-slate-200" />
-
-        <!-- 2. FOUR PILLARS -->
-        <section id="pillars" class="scroll-mt-24 space-y-12">
-            <div class="flex items-center space-x-3 mb-2">
-                <span class="text-emerald-600 font-mono font-bold text-sm">02.</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">The Four Pillars of At-Cost Infrastructure</h2>
-            </div>
-
-            <!-- Pillar I -->
-            <div class="bg-white p-7 sm:p-9 rounded-2xl border border-slate-200/90 shadow-sm space-y-4">
-                <div class="flex items-center space-x-3">
-                    <span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 text-xs font-bold font-mono">PILLAR I</span>
-                    <h3 class="text-xl font-bold text-slate-900">Public Credit & Zero-Rent Amortization</h3>
-                </div>
-                <div class="text-sm sm:text-base text-slate-600 space-y-3 leading-relaxed">
-                    <p><strong class="text-slate-900">The Problem:</strong> In a commercial fractional-reserve banking framework, primary residential mortgages extract 100% to 200% of the original principal in pure compound interest over a 30-year lifecycle. This capital does not produce physical wealth; it merely services financial rents.</p>
-                    <p><strong class="text-slate-900">The At-Cost Solution:</strong> Transition primary home lending and foundational public infrastructure financing to a public utility credit facility capped at <strong class="text-emerald-700">0.75% annualized administrative interest</strong>.</p>
-                    <p><strong class="text-slate-900">Mechanics:</strong> Loans are backed by real physical assets with zero speculative secondary securitization. Repayments return 100% of the principal directly to retirement of the credit issue, with the 0.75% fee covering loan officer underwriting, title registries, and software infrastructure.</p>
-                </div>
-            </div>
-
-            <!-- Pillar II -->
-            <div class="bg-white p-7 sm:p-9 rounded-2xl border border-slate-200/90 shadow-sm space-y-4">
-                <div class="flex items-center space-x-3">
-                    <span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 text-xs font-bold font-mono">PILLAR II</span>
-                    <h3 class="text-xl font-bold text-slate-900">The Direct Medical Care Trust</h3>
-                </div>
-                <div class="text-sm sm:text-base text-slate-600 space-y-3 leading-relaxed">
-                    <p><strong class="text-slate-900">The Problem:</strong> Third-party commercial payers create misaligned incentives: denial-of-care optimization, bloated billing departments (accounting for up to 30% of aggregate hospital operating costs), and monopolistic pharmaceutical pricing.</p>
-                    <p><strong class="text-slate-900">The At-Cost Solution:</strong> Medical provisioning is decoupled from for-profit underwriting and placed into an open <strong class="text-emerald-700">Direct Health Trust</strong>.</p>
-                    <p><strong class="text-slate-900">Mechanics:</strong> Capital is distributed directly to provider networks and clinical operations based on open fee-for-service cost recovery plus capital depreciation. Eliminates prior authorizations, corporate executive equity payouts, and marketing overhead, delivering an immediate <strong class="text-slate-900">42% baseline cost reduction</strong>.</p>
-                </div>
-            </div>
-
-            <!-- Pillar III -->
-            <div class="bg-white p-7 sm:p-9 rounded-2xl border border-slate-200/90 shadow-sm space-y-4">
-                <div class="flex items-center space-x-3">
-                    <span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 text-xs font-bold font-mono">PILLAR III</span>
-                    <h3 class="text-xl font-bold text-slate-900">Mutualized Risk & Catastrophic Pools</h3>
-                </div>
-                <div class="text-sm sm:text-base text-slate-600 space-y-3 leading-relaxed">
-                    <p><strong class="text-slate-900">The Problem:</strong> Property and casualty insurance firms operate as leveraged capital pools. In severe climate or economic events, claims are denied or premiums spike to protect corporate return on equity (ROE).</p>
-                    <p><strong class="text-slate-900">The At-Cost Solution:</strong> Universal casualty, auto, and property risk is pooled into a <strong class="text-emerald-700">Mutual Citizen Reserve</strong>.</p>
-                    <p><strong class="text-slate-900">Mechanics:</strong> Premiums are calculated on rolling 10-year actuarial cost bands. Unclaimed funds remain inside the reserve or are distributed as annual premium credits. No external equity extraction occurs.</p>
-                </div>
-            </div>
-
-            <!-- Pillar IV -->
-            <div class="bg-white p-7 sm:p-9 rounded-2xl border border-slate-200/90 shadow-sm space-y-4">
-                <div class="flex items-center space-x-3">
-                    <span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 text-xs font-bold font-mono">PILLAR IV</span>
-                    <h3 class="text-xl font-bold text-slate-900">Automated Universal Consumption Tax & Prebate</h3>
-                </div>
-                <div class="text-sm sm:text-base text-slate-600 space-y-3 leading-relaxed">
-                    <p><strong class="text-slate-900">The Problem:</strong> The progressive income tax system and payroll taxes (FICA) punish productivity, create vast compliance deadweight, and fail to capture wealth hoarded in offshore shelters or unrealized asset gains.</p>
-                    <p><strong class="text-slate-900">The At-Cost Solution:</strong> Complete repeal of personal income, corporate income, and payroll taxes in favor of a <strong class="text-emerald-700">30% inclusive retail consumption levy</strong> paired with a monthly <strong class="text-emerald-700">Federal Poverty Line (FPL) Prebate</strong>.</p>
-                    <p><strong class="text-slate-900">Mechanics:</strong> Every legal resident receives an automated, unconditioned monthly cash payment equal to the 30% tax rate multiplied by the monthly poverty threshold. Spending up to the poverty line is 100% tax-free in net terms.</p>
-                </div>
-            </div>
-        </section>
-
-        <hr class="border-slate-200" />
-
-        <!-- 3. HOUSEHOLD LEDGER -->
-        <section id="micro" class="scroll-mt-24">
-            <div class="flex items-center space-x-3 mb-6">
-                <span class="text-emerald-600 font-mono font-bold text-sm">03.</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Household Balance Sheet Comparison</h2>
-            </div>
-            <p class="text-slate-600 text-base sm:text-lg mb-8 leading-relaxed">
-                Representative analysis of a median 4-person household earning <strong>$85,000 gross annual income</strong>, carrying a <strong>$350,000 mortgage</strong>, with standard medical and property insurance liabilities.
-            </p>
-
-            <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-                <table class="min-w-full divide-y divide-slate-200 text-sm text-left">
-                    <thead class="bg-slate-900 text-white text-xs uppercase tracking-wider font-semibold">
-                        <tr>
-                            <th class="px-6 py-4">Budget Category</th>
-                            <th class="px-6 py-4">Legacy Commercial Model</th>
-                            <th class="px-6 py-4 text-emerald-400">At-Cost Mutualized Model</th>
-                            <th class="px-6 py-4 text-right">Net Annual Delta</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-100 text-slate-700">
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-900">Federal Income & Payroll Tax</td>
-                            <td class="px-6 py-4">$14,025 <span class="text-xs text-slate-400 block">(16.5% effective)</span></td>
-                            <td class="px-6 py-4 text-emerald-700 font-bold">$2,088 <span class="text-xs text-slate-500 block">(Net of Prebate)</span></td>
-                            <td class="px-6 py-4 text-right font-mono font-bold text-emerald-600">+$11,937 / yr</td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-900">Mortgage Debt Servicing</td>
-                            <td class="px-6 py-4">$22,750 <span class="text-xs text-slate-400 block">(6.5% rate)</span></td>
-                            <td class="px-6 py-4 text-emerald-700 font-bold">$2,625 <span class="text-xs text-slate-500 block">(0.75% at-cost)</span></td>
-                            <td class="px-6 py-4 text-right font-mono font-bold text-emerald-600">+$20,125 / yr</td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-900">Healthcare (Prem. + Out-of-Pocket)</td>
-                            <td class="px-6 py-4">$13,600</td>
-                            <td class="px-6 py-4 text-emerald-700 font-bold">$7,888 <span class="text-xs text-slate-500 block">(58% baseline)</span></td>
-                            <td class="px-6 py-4 text-right font-mono font-bold text-emerald-600">+$5,712 / yr</td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4 font-semibold text-slate-900">Property & Auto Insurance</td>
-                            <td class="px-6 py-4">$4,200</td>
-                            <td class="px-6 py-4 text-emerald-700 font-bold">$2,100 <span class="text-xs text-slate-500 block">(50% baseline)</span></td>
-                            <td class="px-6 py-4 text-right font-mono font-bold text-emerald-600">+$2,100 / yr</td>
-                        </tr>
-                        <tr class="bg-slate-50 text-base">
-                            <td class="px-6 py-5 font-bold text-slate-900 uppercase tracking-wide">Total Non-Discretionary Burden</td>
-                            <td class="px-6 py-5 font-bold text-rose-900 font-mono">$54,575 / yr</td>
-                            <td class="px-6 py-5 font-black text-emerald-900 font-mono">$14,701 / yr</td>
-                            <td class="px-6 py-5 text-right font-mono font-black text-emerald-700 text-lg">+$39,874 / yr</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-xs sm:text-sm text-emerald-900 font-medium">
-                <strong>Microeconomic Result:</strong> The representative family recaptures over <strong>$3,300 per month</strong> in liquid disposable income without requiring nominal wage inflation.
-            </div>
-        </section>
-
-        <hr class="border-slate-200" />
-
-        <!-- 4. MACRO REVENUE MODEL -->
-        <section id="macro" class="scroll-mt-24">
-            <div class="flex items-center space-x-3 mb-6">
-                <span class="text-emerald-600 font-mono font-bold text-sm">04.</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Macroeconomic Feasibility & National Balance Sheet</h2>
-            </div>
-            <p class="text-slate-600 text-base sm:text-lg mb-8 leading-relaxed">
-                Demonstrating that a 30% consumption levy across a $14.0 Trillion retail base, combined with public credit administrative fees, completely covers federal operations with a positive surplus.
-            </p>
-
-            <div class="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 border border-slate-800 shadow-xl">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="text-xs uppercase font-bold text-emerald-400 tracking-wider mb-4 border-b border-slate-800 pb-2">National Revenue Inflows</h4>
-                        <div class="space-y-3 font-mono text-sm">
-                            <div class="flex justify-between">
-                                <span class="text-slate-300">Gross Consumption Tax (30%)</span>
-                                <span class="text-emerald-400 font-bold">+$4.20 T</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-slate-300">Public Credit Admin Fee (0.75%)</span>
-                                <span class="text-emerald-400 font-bold">+$0.32 T</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-slate-300">Tariffs & Resource Rents</span>
-                                <span class="text-emerald-400 font-bold">+$0.33 T</span>
-                            </div>
-                            <div class="pt-3 border-t border-slate-800 flex justify-between font-bold text-base">
-                                <span class="text-white">Total Annual Revenues</span>
-                                <span class="text-emerald-300 font-mono">$4.85 T</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="text-xs uppercase font-bold text-teal-400 tracking-wider mb-4 border-b border-slate-800 pb-2">Appropriations & Outlays</h4>
-                        <div class="space-y-3 font-mono text-sm">
-                            <div class="flex justify-between">
-                                <span class="text-slate-300">Universal Prebate Pool</span>
-                                <span class="text-slate-300">-$1.40 T</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-slate-300">Civic Ops, Infra, Defense</span>
-                                <span class="text-slate-300">-$1.75 T</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-slate-300">Direct Health Trust Buffer</span>
-                                <span class="text-slate-300">-$1.10 T</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-slate-300">Debt Sinking / Buyback Fund</span>
-                                <span class="text-slate-300">-$0.40 T</span>
-                            </div>
-                            <div class="pt-3 border-t border-slate-800 flex justify-between font-bold text-base">
-                                <span class="text-white">Total Annual Outlays</span>
-                                <span class="text-slate-300 font-mono">$4.65 T</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div class="text-xs uppercase font-semibold tracking-wider text-slate-400">Net Structural Operating Balance</div>
-                    <div class="text-2xl font-black font-mono text-emerald-400">+$200 Billion Surplus / yr</div>
-                </div>
-            </div>
-        </section>
-
-        <hr class="border-slate-200" />
-
-        <!-- 5. ROADMAP -->
-        <section id="roadmap" class="scroll-mt-24">
-            <div class="flex items-center space-x-3 mb-6">
-                <span class="text-emerald-600 font-mono font-bold text-sm">05.</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Implementation & Transition Roadmap</h2>
-            </div>
-
-            <div class="space-y-6">
-                <div class="flex items-start space-x-4 p-5 rounded-2xl bg-white border border-slate-200">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-700 flex items-center justify-center font-bold font-mono text-sm flex-shrink-0">P1</div>
-                    <div>
-                        <h3 class="font-bold text-slate-900 text-base">Statutory Enactment & Tax Code Repeal</h3>
-                        <p class="text-sm text-slate-600 mt-1">Abolish federal income and payroll taxes. Deploy point-of-sale consumption split and initiate monthly prebate distribution.</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-4 p-5 rounded-2xl bg-white border border-slate-200">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-700 flex items-center justify-center font-bold font-mono text-sm flex-shrink-0">P2</div>
-                    <div>
-                        <h3 class="font-bold text-slate-900 text-base">Credit Facility Conversion</h3>
-                        <p class="text-sm text-slate-600 mt-1">Authorize monetary authority to originate 0.75% amortizing notes for primary home buyers and refinance existing primary mortgages.</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-4 p-5 rounded-2xl bg-white border border-slate-200">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-700 flex items-center justify-center font-bold font-mono text-sm flex-shrink-0">P3</div>
-                    <div>
-                        <h3 class="font-bold text-slate-900 text-base">Healthcare Trust Consolidation</h3>
-                        <p class="text-sm text-slate-600 mt-1">Mutualize hospital networks and private insurance providers into the Direct Health Trust, establishing cost-recovery provider schedules.</p>
-                    </div>
-                </div>
-                <div class="flex items-start space-x-4 p-5 rounded-2xl bg-white border border-slate-200">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-700 flex items-center justify-center font-bold font-mono text-sm flex-shrink-0">P4</div>
-                    <div>
-                        <h3 class="font-bold text-slate-900 text-base">Sinking Fund Activation</h3>
-                        <p class="text-sm text-slate-600 mt-1">Direct the structural $200B annual fiscal surplus into open-market retirement of outstanding interest-bearing sovereign bonds.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA TO INTERACTIVE TOOL -->
-        <section class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-3xl p-8 sm:p-12 text-center shadow-xl">
-            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Run Your Personal Household Analysis</h2>
-            <p class="mt-4 text-emerald-100 text-base sm:text-lg max-w-2xl mx-auto">
-                Test this framework against your own real-world income, mortgage balance, and healthcare expenses with the live model.
-            </p>
-            <div class="mt-8">
-                <a href="calculator.html" class="inline-block px-8 py-3.5 bg-slate-950 hover:bg-slate-900 text-white font-bold rounded-xl shadow-lg transition-all">
-                    Open Household Calculator
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div class="flex items-center space-x-2">
-                <div class="w-6 h-6 rounded bg-emerald-500 flex items-center justify-center text-slate-950 text-xs font-bold">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                </div>
-                <span class="text-slate-200 font-semibold">The At-Cost Economy Blueprint</span>
-            </div>
-            <div class="text-xs text-slate-500">
-                Public domain economic architecture model.
-            </div>
-        </div>
-    </footer>
-    <footer class="w-full bg-gray-50 border-t border-gray-200 mt-16 py-8">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
-    <p class="font-medium text-gray-700">A New America &bull; Mutualized At-Cost Economic Framework</p>
-    <div class="mt-4 flex justify-center space-x-6">
-      <a href="index.html" class="hover:text-gray-900 transition-colors">Home</a>
-      <a href="manifesto.html" class="hover:text-gray-900 transition-colors">Manifesto</a>
-      <a href="calculator.html" class="hover:text-gray-900 transition-colors">Calculator</a>
-      <a href="macro-budget.html" class="hover:text-gray-900 transition-colors">Macro Budget</a>
+  <header class="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="text-xl font-bold tracking-tight text-blue-900 hover:text-blue-700 transition-colors">
+          A New America
+        </a>
+        <nav class="flex items-center space-x-6 text-sm font-medium text-gray-600">
+          <a href="index.html" class="hover:text-blue-700 transition-colors">Home</a>
+          <a href="manifesto.html" class="text-blue-700 font-semibold">Manifesto</a>
+          <a href="calculator.html" class="hover:text-blue-700 transition-colors">Calculator</a>
+          <a href="macro-budget.html" class="hover:text-blue-700 transition-colors">Macro Budget</a>
+        </nav>
+      </div>
     </div>
-    <p class="mt-4 text-xs text-gray-400">&copy; 2026 Anewamerica.info. All rights reserved.</p>
-  </div>
-</footer>
+  </header>
 
+  <main class="flex-grow max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <article class="bg-white p-8 sm:p-12 rounded-xl border border-gray-200 shadow-sm">
+      <header class="mb-8 border-b border-gray-100 pb-8">
+        <span class="text-xs font-semibold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+          White Paper
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 tracking-tight">
+          A Structural Paradigm for At-Cost Mutualization
+        </h1>
+        <p class="text-sm text-gray-500 mt-2">Foundational framework for cooperative infrastructure & household stability</p>
+      </header>
+
+      <div class="space-y-6 text-gray-700 leading-relaxed">
+        <p class="text-lg font-medium text-gray-900 leading-normal">
+          Modern household cost escalation is rarely a product of basic production constraints; it is driven by systemic financialization, layered intermediary rent extraction, and marketing overhead.
+        </p>
+
+        <h2 class="text-xl font-bold text-gray-900 pt-4">1. The Friction of Intermediary Pricing</h2>
+        <p>
+          In conventional distribution chains, end consumers absorb compounded margins at every node: producer, distributor, logistics provider, marketer, and retail platform. By decoupling core life-essential infrastructure from speculative profit margins, consumer prices collapse directly toward actual cost-of-production.
+        </p>
+
+        <h2 class="text-xl font-bold text-gray-900 pt-4">2. The Mutualized Architecture</h2>
+        <p>
+          A mutualized at-cost model treats distribution networks as non-extractive utilities. Capital is structured to service upkeep, operational labor, and technological modernization without compounding investor equity demands.
+        </p>
+
+        <blockquote class="border-l-4 border-blue-700 pl-4 py-2 italic text-gray-800 bg-blue-50/50 rounded-r">
+          "When core essentials are delivered at exact cost, real purchasing power expands organically without creating inflationary wage-price spirals."
+        </blockquote>
+
+        <h2 class="text-xl font-bold text-gray-900 pt-4">3. Macroeconomic Realignment</h2>
+        <p>
+          Relieving the lower-and-middle quintiles from structural debt inflation directly lowers systemic delinquency rates, stabilizing both national balance sheets and localized commerce.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="w-full bg-white border-t border-gray-200 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+      <p class="font-medium text-gray-700">A New America &bull; Mutualized At-Cost Economic Framework</p>
+      <div class="mt-3 flex justify-center space-x-6 text-xs text-gray-600">
+        <a href="index.html" class="hover:text-gray-900">Home</a>
+        <a href="manifesto.html" class="hover:text-gray-900">Manifesto</a>
+        <a href="calculator.html" class="hover:text-gray-900">Calculator</a>
+        <a href="macro-budget.html" class="hover:text-gray-900">Macro Budget</a>
+      </div>
+      <p class="mt-4 text-xs text-gray-400">&copy; 2026 Anewamerica.info. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
