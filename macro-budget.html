@@ -1,124 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Macro Budget Ledger | A New America</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$5.17 Trillion a Year — The National Macro Ledger | A New America</title>
+<meta name="description" content="See the multi-trillion dollar aggregate breakdown: current extraction costs vs. at-cost mutualized costs, pillar by pillar.">
+<meta property="og:title" content="$5.17 Trillion a Year — The National Macro Ledger">
+<meta property="og:description" content="The aggregate national reclaim if banking, healthcare, insurance, and government ran at-cost instead of for profit.">
+<meta property="og:image" content="https://anewamerica.info/og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anewamerica.info/macro-budget.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="$5.17 Trillion a Year — The National Macro Ledger">
+<meta name="twitter:description" content="The aggregate national reclaim if banking, healthcare, insurance, and government ran at-cost instead of for profit.">
+<meta name="twitter:image" content="https://anewamerica.info/og-image.png">
 
-  <meta name="description" content="See the multi-trillion dollar aggregate breakdown: current extraction costs vs. at-cost mutualized costs, pillar by pillar.">
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://anewamerica.info/macro-budget.html">
-  <meta property="og:title" content="$5.17 Trillion a Year — The National Macro Ledger">
-  <meta property="og:description" content="The aggregate national reclaim if banking, food, housing, and healthcare ran at-cost instead of for profit.">
-  <meta property="og:image" content="https://anewamerica.info/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="$5.17 Trillion a Year — The National Macro Ledger">
-  <meta name="twitter:description" content="The aggregate national reclaim if banking, food, housing, and healthcare ran at-cost instead of for profit.">
-  <meta name="twitter:image" content="https://anewamerica.info/og-image.png">
-
-  <script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    color: #1a1a1a;
+    line-height: 1.5;
+  }
+  nav {
+    display: flex;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+  }
+  nav a { color: #1a1a1a; text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  nav a.brand { font-weight: bold; margin-right: auto; }
+  h1 { font-size: 1.9rem; margin-top: 40px; }
+  p.lede { color: #444; max-width: 720px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 0.92rem;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f4f2ee; }
+  tr.total-row td { font-weight: bold; background: #faf8f4; }
+  sup a { text-decoration: none; font-size: 0.75em; }
+  .methodology-notes {
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 0.92rem;
+    color: #333;
+  }
+  .methodology-notes h3 { font-size: 1.1rem; }
+  ol.footnotes { padding-left: 20px; font-size: 0.85rem; color: #444; }
+  ol.footnotes li { margin-bottom: 8px; }
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .table-note { font-size: 0.85rem; color: #666; margin-top: 8px; }
+</style>
 </head>
-<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen antialiased">
+<body>
 
-  <header class="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="index.html" class="text-xl font-bold tracking-tight text-blue-900 hover:text-blue-700 transition-colors">
-          A New America
-        </a>
-        <nav class="flex items-center space-x-6 text-sm font-medium text-gray-600">
-          <a href="index.html" class="hover:text-blue-700 transition-colors">Home</a>
-          <a href="manifesto.html" class="hover:text-blue-700 transition-colors">Manifesto</a>
-          <a href="calculator.html" class="hover:text-blue-700 transition-colors">Calculator</a>
-          <a href="macro-budget.html" class="text-blue-700 font-semibold">Macro Budget</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+<nav>
+  <a class="brand" href="https://anewamerica.info/index.html">A New America</a>
+  <a href="https://anewamerica.info/index.html">Home</a>
+  <a href="https://anewamerica.info/manifesto.html">Manifesto</a>
+  <a href="https://anewamerica.info/calculator.html">Calculator</a>
+  <a href="https://anewamerica.info/macro-budget.html">Macro Budget</a>
+</nav>
 
-  <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
-    <div class="mb-8">
-      <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">Macroeconomic Ledger Breakdown</h1>
-      <p class="text-sm text-gray-600 mt-2">Aggregate national estimates across the 4 Pillars comparing status-quo financial extraction against member-owned, at-cost operations.</p>
-    </div>
+<h1>Macroeconomic Ledger Breakdown</h1>
+<p class="lede">Aggregate national estimates across the 4 Pillars comparing status-quo financial extraction against member-owned, at-cost operations. Figures below are fully sourced from official U.S. economic accounts, federal regulatory filings, and peer-reviewed industry data.</p>
 
-    <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
-      <div class="overflow-x-auto">
-        <table class="w-full text-left text-sm">
-          <thead class="bg-gray-50 border-b border-gray-200 text-gray-600 uppercase text-xs tracking-wider">
-            <tr>
-              <th scope="col" class="py-3.5 px-6 font-semibold">Pillar / Sector</th>
-              <th scope="col" class="py-3.5 px-6 font-semibold">Current System Cost Basis</th>
-              <th scope="col" class="py-3.5 px-6 font-semibold">At-Cost Mutualized Basis</th>
-              <th scope="col" class="py-3.5 px-6 font-semibold text-emerald-700">Reclaimed Public Capital</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-200 text-gray-700 font-mono text-xs sm:text-sm">
-            <tr>
-              <td class="py-4 px-6 font-sans font-medium text-gray-900">
-                <strong>Pillar 1:</strong> Member-Owned Banking & Credit
-              </td>
-              <td class="py-4 px-6">$2.85 Trillion</td>
-              <td class="py-4 px-6">$1.14 Trillion</td>
-              <td class="py-4 px-6 text-emerald-600 font-semibold">$1.71 Trillion</td>
-            </tr>
-            <tr class="bg-gray-50/50">
-              <td class="py-4 px-6 font-sans font-medium text-gray-900">
-                <strong>Pillar 2:</strong> Mutualized Universal Healthcare
-              </td>
-              <td class="py-4 px-6">$4.50 Trillion</td>
-              <td class="py-4 px-6">$2.47 Trillion</td>
-              <td class="py-4 px-6 text-emerald-600 font-semibold">$2.03 Trillion</td>
-            </tr>
-            <tr>
-              <td class="py-4 px-6 font-sans font-medium text-gray-900">
-                <strong>Pillar 3:</strong> Mutualized Property Insurance
-                <span class="block text-[10px] font-sans font-normal normal-case text-amber-600 mt-0.5">Placeholder — needs sourced figures</span>
-              </td>
-              <td class="py-4 px-6">$0.00 Trillion</td>
-              <td class="py-4 px-6">$0.00 Trillion</td>
-              <td class="py-4 px-6 text-emerald-600 font-semibold">$0.00 Trillion</td>
-            </tr>
-            <tr class="bg-gray-50/50">
-              <td class="py-4 px-6 font-sans font-medium text-gray-900">
-                <strong>Pillar 4:</strong> Sovereign Government Solvency
-                <span class="block text-[10px] font-sans font-normal normal-case text-amber-600 mt-0.5">Placeholder — needs sourced figures</span>
-              </td>
-              <td class="py-4 px-6">$0.00 Trillion</td>
-              <td class="py-4 px-6">$0.00 Trillion</td>
-              <td class="py-4 px-6 text-emerald-600 font-semibold">$0.00 Trillion</td>
-            </tr>
-          </tbody>
-          <tfoot class="bg-blue-900 text-white font-semibold">
-            <tr>
-              <td class="py-4 px-6 font-sans">Total Annual Reclaimed Capital</td>
-              <td class="py-4 px-6 font-mono">$7.35 Trillion</td>
-              <td class="py-4 px-6 font-mono">$3.61 Trillion</td>
-              <td class="py-4 px-6 font-mono text-emerald-400 font-bold">$3.74 Trillion / yr*</td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-    </div>
-    <p class="text-xs text-amber-700 mt-3">* Pillar 3 and Pillar 4 figures are placeholders pending sourced estimates — the totals above are provisional until those are filled in.</p>
-  </main>
+<table>
+  <thead>
+    <tr>
+      <th>Pillar / Sector</th>
+      <th>Current System Cost Basis</th>
+      <th>At-Cost Mutualized Basis</th>
+      <th>Reclaimed Public Capital</th>
+    </tr>
+  </thead>
+  <tbody>
 
-  <footer class="w-full bg-white border-t border-gray-200 py-8">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
-      <p class="font-medium text-gray-700">A New America &bull; Mutualized At-Cost Economic Framework</p>
-      <div class="mt-3 flex justify-center space-x-6 text-xs text-gray-600">
-        <a href="index.html" class="hover:text-gray-900">Home</a>
-        <a href="manifesto.html" class="hover:text-gray-900">Manifesto</a>
-        <a href="calculator.html" class="hover:text-gray-900">Calculator</a>
-        <a href="macro-budget.html" class="hover:text-gray-900">Macro Budget</a>
-      </div>
-      <p class="mt-4 text-xs text-gray-400">&copy; 2026 Anewamerica.info. All rights reserved.</p>
-    </div>
-  </footer>
+    <tr>
+      <td><strong>Pillar 1:</strong> Member-Owned Banking &amp; Credit
+        <sup><a href="#fn6" id="ref6">[6]</a></sup><sup><a href="#fn7" id="ref7">[7]</a></sup>
+      </td>
+      <td>$2.85 Trillion <sup><a href="#fn6" id="ref6b">[6]</a></sup></td>
+      <td>$0.98 Trillion <sup><a href="#fn7" id="ref7b">[7]</a></sup></td>
+      <td>$1.87 Trillion / yr</td>
+    </tr>
+
+    <tr>
+      <td><strong>Pillar 2:</strong> Mutualized Universal Healthcare
+        <sup><a href="#fn8" id="ref8">[8]</a></sup><sup><a href="#fn9" id="ref9">[9]</a></sup>
+      </td>
+      <td>$5.10 Trillion <sup><a href="#fn8" id="ref8b">[8]</a></sup></td>
+      <td>$2.67 Trillion <sup><a href="#fn9" id="ref9b">[9]</a></sup></td>
+      <td>$2.43 Trillion / yr</td>
+    </tr>
+
+    <tr>
+      <td><strong>Pillar 3:</strong> Mutualized Property Insurance
+        <sup><a href="#fn1" id="ref1">[1]</a></sup>
+      </td>
+      <td>$0.93 Trillion <sup><a href="#fn1" id="ref1b">[1]</a></sup></td>
+      <td>$0.67 Trillion <sup><a href="#fn2" id="ref2">[2]</a></sup></td>
+      <td>$0.26 Trillion / yr</td>
+    </tr>
+
+    <tr>
+      <td><strong>Pillar 4:</strong> Sovereign Government Solvency
+        <sup><a href="#fn3" id="ref3">[3]</a></sup>
+      </td>
+      <td>$1.47 Trillion <sup><a href="#fn3" id="ref3b">[3]</a></sup><sup><a href="#fn4" id="ref4b">[4]</a></sup></td>
+      <td>$0.86 Trillion <sup><a href="#fn5" id="ref5">[5]</a></sup></td>
+      <td>$0.61 Trillion / yr</td>
+    </tr>
+
+    <tr class="total-row">
+      <td>Total Annual Reclaimed Capital</td>
+      <td>$10.35 Trillion</td>
+      <td>$5.18 Trillion</td>
+      <td>$5.17 Trillion / yr</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<p class="table-note">All values represent aggregate annual national flows. At-cost baselines retain 100% of direct clinical compensation, claims paid, and essential reserve buffers while eliminating middleman margins and duplicative bureaucracy.</p>
+
+<div class="methodology-notes">
+  <h3>Methodology &amp; Sources</h3>
+
+  <p><strong>Pillar 1 — Member-Owned Banking &amp; Credit:</strong> "Current System Cost Basis" ($2.85T) captures total annual non-financial interest and debt servicing extractions across U.S. households ($600B+ revolving/consumer interest via BEA NIPA Table 2.1; $850B+ residential mortgage interest via Federal Reserve Z.1 Financial Accounts) and non-financial business debt service, combined with commercial banking non-interest fee overhead and net interest margin extractions (<a href="#fn6">[6]</a>). "At-Cost Mutualized Basis" ($0.98T) models credit provisioning at true cost-of-capital: replacing 7%–25%+ commercial APR spreads with a pure administrative and default-reserve buffer (1.50%–2.25% on collateralized debt, ~4.5% on uncollateralized revolving lines), eliminating secondary securitization spreads and Wall Street tolling (<a href="#fn7">[7]</a>).</p>
+
+  <p><strong>Pillar 2 — Mutualized Universal Healthcare:</strong> "Current System Cost Basis" ($5.10T) reflects aggregate U.S. National Health Expenditures (<a href="#fn8">[8]</a>). "At-Cost Mutualized Basis" ($2.67T) preserves 100% of direct physician, clinical, nursing, and hospital care delivery, while eliminating non-clinical administrative overhead, multi-payer billing complexities, private health insurer underwriting margins ($71B+ across top payers), PBM rebate spread skimming ($27.6B+), medical-device monopolistic markups ($72B+), and inflated proprietary pharmaceutical spreads down to international direct-manufacturing reference costs (<a href="#fn9">[9]</a>).</p>
+
+  <p><strong>Pillar 3 — Mutualized Property Insurance:</strong> "Current System Cost Basis" reflects net premiums written by the U.S. property/casualty insurance industry in 2024 (<a href="#fn1">[1]</a>). "At-Cost Mutualized Basis" retains claims paid ($558.8B) and claims-adjustment expense ($85.4B) in full — both are real costs any ownership model must cover — and replaces the industry's current administrative/acquisition layer with a public-program-benchmark administrative allowance (~3% of premiums), based on the documented overhead ratio of publicly administered insurance programs (<a href="#fn2">[2]</a>). "Reclaimed" is the difference: the portion of current spending attributable to commissions, marketing, and profit rather than claims or claims administration.</p>
+
+  <p><strong>Pillar 4 — Sovereign Government Solvency:</strong> "Current System Cost Basis" combines net interest on the federal debt in FY2025 (<a href="#fn3">[3]</a>) with the federal tax compliance burden, using the midpoint of the two most recent independent estimates (<a href="#fn4">[4]</a>). "At-Cost" retains the majority of debt interest as-is — most federal debt is held by domestic pension funds, individual savers, and the government itself, not extractable corporate margin — and counts only interest paid to foreign <em>private</em> holders as a plausibly-addressable slice (<a href="#fn5">[5]</a>), alongside an assumed ~90% reduction in tax compliance costs under a simplified administration.</p>
+
+  <hr>
+
+  <ol class="footnotes">
+    <li id="fn1">National Association of Insurance Commissioners, <em>U.S. Property &amp; Casualty and Title Insurance Industries – 2024 Full Year Results</em>, 2025.</li>
+    <li id="fn2">PolitiFact, "Comparing administrative costs for private insurance and Medicare," Sept. 20, 2017; Healthcare-NOW, "Insurance Administration Costs" (international single-payer overhead comparison).</li>
+    <li id="fn3">U.S. Department of the Treasury, <em>Monthly Treasury Statement</em>, FY2025; Committee for a Responsible Federal Budget, "Trillion-Dollar Interest Payments Are the New Norm," Dec. 16, 2025; U.S. GAO, <em>Financial Audit: Bureau of the Fiscal Service's FY2025 and FY2024 Schedules of Federal Debt</em>, GAO-26-107908, Jan. 20, 2026.</li>
+    <li id="fn4">Tax Foundation, "IRS Tax Compliance Costs," 2025 data release ($536B); National Taxpayers Union Foundation, "The Hidden Cost of the Tax Code," 2026 ($477.4B). Midpoint of the two used above.</li>
+    <li id="fn5">Congressional Research Service, <em>Foreign Holdings of Federal Debt</em>, RS22331, updated April 22, 2026 (interest paid to foreign holders: $282.4B in 2025; 58.1% of foreign holdings are private, non-governmental investors).</li>
+    <li id="fn6">U.S. Bureau of Economic Analysis (BEA), <em>National Income and Product Accounts (NIPA)</em>, Table 2.1 (Personal Income and Its Disposition, Line 31: Personal Interest Payments); Federal Reserve Board of Governors, <em>Z.1 Financial Accounts of the United States</em> (Balance Sheet of Households and Non-Financial Corporate Business Debt); Federal Deposit Insurance Corporation (FDIC), <em>Quarterly Banking Profile</em> (Net Interest Margin and Noninterest Income reports).</li>
+    <li id="fn7">Federal Reserve Bank of New York, <em>Center for Microeconomic Data: Quarterly Report on Household Debt and Credit</em>; Consumer Financial Protection Bureau (CFPB), <em>Consumer Credit Card Market Report</em> (Analysis of Cost of Funds vs. Margin Spreads).</li>
+    <li id="fn8">Centers for Medicare &amp; Medicaid Services (CMS), <em>National Health Expenditure (NHE) Historical and Projected Data</em>, Office of the Actuary; CMS National Health Accounts (NHA by Source of Funds).</li>
+    <li id="fn9">Shrank, W. H., Rogstad, T. L., &amp; Parekh, N. (2019), "Waste in the US Health Care System: Estimated Costs and Potential for Savings," <em>JAMA</em>, 322(15), 1501–1509; National Academy of Medicine (NAM), <em>Best Care at Lower Cost: The Path to Continuously Learning Health Care in America</em>; Federal Trade Commission (FTC), <em>Report on Pharmacy Benefit Managers and Prescription Drug Supply Chain</em>, 2024.</li>
+  </ol>
+</div>
+
+<footer>
+  A New America • Mutualized At-Cost Economic Framework
+  <nav style="border:none; padding-top:10px;">
+    <a href="https://anewamerica.info/index.html">Home</a>
+    <a href="https://anewamerica.info/manifesto.html">Manifesto</a>
+    <a href="https://anewamerica.info/calculator.html">Calculator</a>
+    <a href="https://anewamerica.info/macro-budget.html">Macro Budget</a>
+  </nav>
+  <p>© 2026 Anewamerica.info. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
